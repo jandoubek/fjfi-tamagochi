@@ -18,17 +18,19 @@ var jadernak = {
 		this.aktivity[1]=new aktivita("Učení",2,-10,+10);
 		this.aktivity[2]=new aktivita("Pivo",2,10,-5);
 
+		//zobrazení panacka, zatím jen obrazek smajlika
+		document.write('<img style="position: absolute; top: 100px; left: 100px" id="jadernak_img" src=img/smile_zluty.png>');
+
 		//zobrazeni aktivit
+		document.write('<div style="position: absolute; top: 100px; left: 50px">');
 		for (var i=0; i<this.aktivity.length; i++) {
-			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-default" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
+			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-success" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
 			};
+		document.write('</div>');
 
 		//zobrazeni Zdraví Znalostí
-			document.write('Zdravi: <div id="zdravi">'+this.zdravi+'</div>');
-			document.write('Znalosti: <div id="znalosti">'+this.znalosti+'</div>');
-
-		//zobrazení panacka, zatím jen obrazek smajlika
-			document.write('<img id="jadernak_img" src=img/smile_zluty.png><br>');
+			document.write('<div style="position: absolute; top: 100px; left: 200px" id="zdravi">Zdravi:' +this.zdravi+'</div>');
+			document.write('<div style="position: absolute; top: 100px; left: 400px" id="znalosti">Znalosti:'+this.znalosti+'</div>');
 
 		},
 
@@ -51,7 +53,7 @@ var jadernak = {
 		if(nazev=="Pivo")
 		{
 			document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
-			setTimeout("jadernak.update(0,0)", 3 * 1000);
+			setTimeout("jadernak.update(0,0)", 500);
 		}
 	},
 	
@@ -62,8 +64,8 @@ var jadernak = {
 		this.znalosti+=znalosti;
 
 		//překresleni
-		document.getElementById("zdravi").innerHTML = this.zdravi;
-		document.getElementById("znalosti").innerHTML = this.znalosti;
+		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.zdravi;
+		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.znalosti;
 
 		if(this.zdravi>0){
 			document.getElementById("jadernak_img").src="img/smile_zluty.png";

@@ -18,13 +18,14 @@ var semestr = {
 		this.predmety[1]=new predmet("ZPRO",2,-10,-5);
 
 		//zobrazeni predmetu
+		document.write('<div style="position: absolute; top: 100px; left: 600px">');
 		for (var i=0; i<this.predmety.length; i++) {
-			document.write('<div id="'+this.predmety[i].nazev+'"> <button type="button" class="btn btn-lg btn-default" onClick="semestr.onClick(\''+this.predmety[i].nazev+'\')">'+this.predmety[i].nazev +'</button> </div>');
+			document.write('<div id="'+this.predmety[i].nazev+'"> <button type="button" class="btn btn-lg btn-danger" onClick="semestr.onClick(\''+this.predmety[i].nazev+'\')">'+this.predmety[i].nazev +'</button> </div>');
 			};
-
+		document.write('</div>');
 		//zobrazeni kreditu a hodin
-			document.write('Kreditů: <div id="kredity">'+this.kredity+'</div>');
-			document.write('Hodiny: <div id="hodiny">'+this.hodiny+'</div>');
+			document.write('<div style="position: absolute; top: 600px; left: 200px" id="kredity">Kreditů: '+this.kredity+'</div>');
+			document.write('<div style="position: absolute; top: 600px; left: 400px" id="hodiny">Hodiny: '+this.hodiny+'</div>');
 		},
 
 	onClick: function(nazev){
@@ -39,7 +40,7 @@ var semestr = {
 						
 		//update vnitrich hodnot
 		this.kredity+=this.predmety[id].kredity;
-		document.getElementById("kredity").innerHTML = this.kredity;
+		document.getElementById("kredity").innerHTML = 'Kreditů: '+this.kredity;
 		
 
 		//alert("zdravi: "+this.predmety[id].zdravi+" znalosti:"+this.predmety[id].znalosti); //oznameni dalsim objektum
@@ -56,7 +57,7 @@ var semestr = {
 
 	updateHodiny: function(hodiny){
 		this.hodiny+=hodiny;
-		document.getElementById("hodiny").innerHTML = this.hodiny;
+		document.getElementById("hodiny").innerHTML ='Hodiny: '+this.hodiny;
 
 	}
 
