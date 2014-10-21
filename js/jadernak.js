@@ -17,20 +17,30 @@ var jadernak = {
 		this.aktivity[0]=new aktivita("Spánek",2,1,-5);
 		this.aktivity[1]=new aktivita("Učení",2,-10,+10);
 		this.aktivity[2]=new aktivita("Pivo",2,10,-5);
-
-		//zobrazení panacka, zatím jen obrazek smajlika
-		document.write('<img style="position: absolute; top: 100px; left: 100px" id="jadernak_img" src=img/smile_zluty.png>');
-
-		//zobrazeni aktivit
-		document.write('<div style="position: absolute; top: 100px; left: 50px">');
+		
+    		//zobrazeni Zdraví Znalostí
+        	document.write('<div class="container"><div class="row top2"><div class="col-xs-4"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
+			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.zdravi+'</div></div><div class="col-xs-2"');
+			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.znalosti+'</div><div class="col-xs-4"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
+      
+		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-4">');
+		
+			//zobrazeni aktivit
+		document.write('<div>');
 		for (var i=0; i<this.aktivity.length; i++) {
-			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-success" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
+			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-default btn-block" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
 			};
 		document.write('</div>');
+		document.write('</div>');
+  		document.write('<div class="col-xs-4">');
+		//zobrazení panacka, zatím jen obrazek smajlika
+		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty.png>');
+		document.write('</div></div>');
+		
 
-		//zobrazeni Zdraví Znalostí
-			document.write('<div style="position: absolute; top: 100px; left: 200px" id="zdravi">Zdravi:' +this.zdravi+'</div>');
-			document.write('<div style="position: absolute; top: 100px; left: 400px" id="znalosti">Znalosti:'+this.znalosti+'</div>');
+		
+
+
 
 		},
 
