@@ -3,7 +3,17 @@ fjfi-tamagochi
 
 Preview
 -----------------------------------
-http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/master/bootstrapdemo.htm
+Master: Poslední zajímavá (stabilní?)  verze:
+http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/master/index.html
+
+Dev: Aktuální vývojová větev
+http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/dev/index.html
+
+Významné verze:
+
+PreAlpha 0.0
+http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/prealpha_0_0/index.html
+
 
 Vize
 -----------------------------------
