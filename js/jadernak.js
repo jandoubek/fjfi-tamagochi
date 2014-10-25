@@ -1,39 +1,41 @@
-function aktivita(nazev,cas,zdravi,znalosti){
-	this.nazev=nazev;
-	this.cas=cas;
-	this.zdravi=zdravi;
-	this.znalosti=znalosti;
+function activity(Name,Time,Health,Knowledge){
+	this.Name=Name;
+	this.Time=Time;
+	this.Health=Health;
+	this.Knowledge=Knowledge;
 }
 
 
 var jadernak = {
-	zdravi:10,
-	znalosti:0,
-	aktivity:Array(),
+	Health:20,
+	Knowledge:0,
+	Activites:Array(),
 		
 	init : function(){
 
 		//nacteni aktivit - mohlo by byt ze souboru
-		this.aktivity[0]=new aktivita("Spánek",2,1,-5);
-		this.aktivity[1]=new aktivita("Učení",2,-10,+10);
-		this.aktivity[2]=new aktivita("Pivo",2,10,-5);
+		//activites loading
+		this.Activites[0]=new activity("Spánek",2,1,-5);
+		this.Activites[1]=new activity("Učení",2,-10,+10);
+		this.Activites[2]=new activity("Pivo",2,10,-5);
 		
-    		//zobrazeni Zdraví Znalostí
+    		//printing Knowledges and Health
         	document.write('<div class="container"><div class="row top2"><div class="col-xs-4"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
-			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.zdravi+'</div></div><div class="col-xs-2"');
-			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.znalosti+'</div><div class="col-xs-4"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
+			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.Health+'</div></div><div class="col-xs-2"');
+			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.Knowledge+'</div><div class="col-xs-4"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
       
 		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-4">');
 		
-			//zobrazeni aktivit
+		//printing activites
 		document.write('<div>');
-		for (var i=0; i<this.aktivity.length; i++) {
-			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-default btn-block" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
+		for (var i=0; i<this.Activites.length; i++) {
+			document.write('<div id="'+this.Activites[i].Name+'"> <button type="button" class="btn btn-lg btn-default btn-block" onClick="jadernak.onClick(\''+this.Activites[i].Name+'\')">'+this.Activites[i].Name +'</button> </div>');
 			};
 		document.write('</div>');
 		document.write('</div>');
   		document.write('<div class="col-xs-4">');
-		//zobrazení panacka, zatím jen obrazek smajlika
+
+		//Printing Smile, 
 		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty.png>');
 		document.write('</div></div>');
 		
@@ -44,40 +46,55 @@ var jadernak = {
 
 		},
 
-	onClick: function(nazev){
+	onClick: function(Name){
 
 		
-		//najdi predmet
-		for (var id=0; id<this.aktivity.length; id++) {
- 			if(this.aktivity[id].nazev === nazev) {
+		//find Activity index
+		for (var id=0; id<this.Activites.length; id++) {
+ 			if(this.Activites[id].Name === Name) {
 				break;
 	  		}
 		}
 						
-		//oznameni dalsim objektum
-		semestr.updateHodiny(-this.aktivity[id].cas);
-
-		//update sam sebe
-		this.update(this.aktivity[id].zdravi,this.aktivity[id].znalosti);
-
-		if(nazev=="Pivo")
+		if(jadernak.Health>=-this.Activites[id].Health && jadernak.Knowledge>=-this.Activites[id].Knowledge)
 		{
-			document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
-			setTimeout("jadernak.update(0,0)", 500);
+			//uprate ostatnich objektu
+			semestr.update(-this.Activites[id].Time);
+
+			//update sam sebe
+			this.update(this.Activites[id].Health,this.Activites[id].Knowledge);
+
+			if(Name=="Pivo")
+			{
+				document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
+				setTimeout("jadernak.update(0,0)", 500);
+			}
+
 		}
+		else
+		{
+			alert("Nelze");
+		}
+
 	},
 	
-	update: function(zdravi, znalosti){	
+	update: function(Health, Knowledge){	
 
 		//update vnitrich hodnot
-		this.zdravi+=zdravi;
-		this.znalosti+=znalosti;
+		this.Health+=Health;
+		this.Knowledge+=Knowledge;
+
+		if(this.Health<0)
+			this.Health=0;
+
+		if(this.Knowledge<0)
+			this.Knowledge=0;
 
 		//překresleni
-		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.zdravi;
-		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.znalosti;
+		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.Health;
+		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.Knowledge;
 
-		if(this.zdravi>0){
+		if(this.Health>15){
 			document.getElementById("jadernak_img").src="img/smile_zluty.png";
 		}
 		else
