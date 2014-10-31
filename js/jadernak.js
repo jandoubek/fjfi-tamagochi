@@ -15,9 +15,9 @@ var jadernak = {
 
 		//nacteni aktivit - mohlo by byt ze souboru
 		//activites loading
-		this.Activites[0]=new activity("Spánek",2,1,-5);
-		this.Activites[1]=new activity("Učení",2,-10,+10);
-		this.Activites[2]=new activity("Pivo",2,10,-5);
+		this.Activites[0]=new activity("Spánek",4,25,-5);
+		this.Activites[1]=new activity("Učení",4,-10,40);
+		this.Activites[2]=new activity("Pivo",4,20,0);
 		
     		//printing Knowledges and Health
         	document.write('<div class="container"><div class="row top2"><div class="col-xs-4"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
