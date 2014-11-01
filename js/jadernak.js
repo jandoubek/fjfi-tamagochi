@@ -1,29 +1,34 @@
-function activity(Name,Time,Health,Knowledge){
+function activity(Name,Time,Health,Knowledge,Sanity){
 	this.Name=Name;
 	this.Time=Time;
 	this.Health=Health;
 	this.Knowledge=Knowledge;
+	this.Sanity=Sanity;
 }
 
 
 var jadernak = {
 	Health:20,
 	Knowledge:0,
+	Sanity:30,
 	Activites:Array(),
 		
 	init : function(){
 
 		//nacteni aktivit - mohlo by byt ze souboru
 		//activites loading
-		this.Activites[0]=new activity("Spánek",4,25,-5);
-		this.Activites[1]=new activity("Učení",4,-10,40);
-		this.Activites[2]=new activity("Pivo",4,20,0);
+		this.Activites[0]=new activity("Spánek",4,25,0,20);
+		this.Activites[1]=new activity("Učení",4,-10,40,-20);
+		this.Activites[2]=new activity("Pivo",4,20,-10,40);
 		
     		//printing Knowledges and Health
         	document.write('<div class="container"><div class="row top2"><div class="col-xs-4"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
 			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.Health+'</div></div><div class="col-xs-2"');
 			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.Knowledge+'</div><div class="col-xs-4"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
-      
+			
+//POTREBA UPRAVIT GRAFIKEM
+			document.write('<div style="position: absolute; top: 130px; left: 650px" id="pricetnost">Příčetnost:' +this.Sanity+'</div>');      
+//
 		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-4">');
 		
 		//printing activites
@@ -56,18 +61,18 @@ var jadernak = {
 	  		}
 		}
 						
-		if(jadernak.Health>=-this.Activites[id].Health && jadernak.Knowledge>=-this.Activites[id].Knowledge)
+		if(jadernak.Health>=-this.Activites[id].Health && jadernak.Knowledge>=-this.Activites[id].Knowledge && jadernak.Sanity>=-this.Activites[id].Sanity)
 		{
 			//uprate ostatnich objektu
 			semestr.update(-this.Activites[id].Time);
 
 			//update sam sebe
-			this.update(this.Activites[id].Health,this.Activites[id].Knowledge);
+			this.update(this.Activites[id].Health,this.Activites[id].Knowledge,this.Activites[id].Sanity);
 
 			if(Name=="Pivo")
 			{
 				document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
-				setTimeout("jadernak.update(0,0)", 500);
+				setTimeout("jadernak.update(0,0,0)", 500);
 			}
 
 		}
@@ -78,14 +83,24 @@ var jadernak = {
 
 	},
 	
-	update: function(Health, Knowledge){	
+	update: function(Health, Knowledge,Sanity){	
 
 		//update vnitrich hodnot
 		this.Health+=Health;
 		this.Knowledge+=Knowledge;
+		this.Sanity+=Sanity;
 
 		if(this.Health<0)
 			this.Health=0;
+
+		if(this.Health>100)
+			this.Health=100;
+
+		if(this.Sanity<0)
+			this.Sanity=0;
+		
+		if(this.Sanity>100)
+			this.Sanity=100;
 
 		if(this.Knowledge<0)
 			this.Knowledge=0;
@@ -93,13 +108,14 @@ var jadernak = {
 		//překresleni
 		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.Health;
 		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.Knowledge;
+		document.getElementById("pricetnost").innerHTML = 'Příčetnost: '+this.Sanity;
 
-		if(this.Health>15){
-			document.getElementById("jadernak_img").src="img/smile_zluty.png";
+		if(this.Health<20 || this.Sanity<20){
+			document.getElementById("jadernak_img").src="img/smile_zeleny.png";
 		}
 		else
 		{
-			document.getElementById("jadernak_img").src="img/smile_zeleny.png";
+			document.getElementById("jadernak_img").src="img/smile_zluty.png";
 		}
 	
 	}
