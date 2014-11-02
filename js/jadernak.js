@@ -114,7 +114,7 @@ var jadernak = {
 		}
 		else
 		{
-			document.getElementById("jadernak_img").src="img/smile_zluty.png";
+			document.getElementById("jadernak_img").src="img/smile_zluty1.png";
 		}
 	
 	}
