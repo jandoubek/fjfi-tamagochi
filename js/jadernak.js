@@ -41,7 +41,7 @@ var jadernak = {
   		document.write('<div class="col-xs-4">');
 
 		//Printing Smile, 
-		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty.png>');
+		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty1.png>');
 		document.write('</div></div>');
 		
 
@@ -71,7 +71,7 @@ var jadernak = {
 
 			if(Name=="Pivo")
 			{
-				document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
+				document.getElementById("jadernak_img").src="img/smile_cerveny1.png";		
 				setTimeout("jadernak.update(0,0,0)", 500);
 			}
 
@@ -111,7 +111,7 @@ var jadernak = {
 		document.getElementById("pricetnost").innerHTML = 'Příčetnost: '+this.Sanity;
 
 		if(this.Health<20 || this.Sanity<20){
-			document.getElementById("jadernak_img").src="img/smile_zeleny.png";
+			document.getElementById("jadernak_img").src="img/smile_zeleny1.png";
 		}
 		else
 		{
