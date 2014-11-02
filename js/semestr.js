@@ -18,7 +18,7 @@ var semestr = {
 		this.Subjects[1]=new subject("ZPRO",2,-10,-5);
 
 		//zobrazeni predmetu
-		document.write('<div class="col-xs-4"><div>');
+		document.write('<div class="col-xs-3"><div>');
 		for (var i=0; i<this.Subjects.length; i++) {
 			document.write('<div id="'+this.Subjects[i].Name+'"> <button type="button" class="btn btn-lg btn-default btn-block" onClick="semestr.onClick(\''+this.Subjects[i].Name+'\')">'+this.Subjects[i].Name +'</button> </div>');
 			};

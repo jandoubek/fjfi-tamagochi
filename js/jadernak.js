@@ -22,14 +22,13 @@ var jadernak = {
 		this.Activites[2]=new activity("Pivo",4,20,-10,40);
 		
     		//printing Knowledges and Health
-        	document.write('<div class="container"><div class="row top2"><div class="col-xs-4"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
-			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.Health+'</div></div><div class="col-xs-2"');
-			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.Knowledge+'</div><div class="col-xs-4"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
+        	document.write('<div class="container"><div class="row top2"><div class="col-xs-3"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
+			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.Health+'</div></div><div class="col-xs-2">');
+			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.Knowledge+'</div></div><div class="col-xs-2"><div class="text-center" id="pricetnost">Příčetnost:' +this.Sanity+'</div></div><div class="col-xs-3"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
 			
-//POTREBA UPRAVIT GRAFIKEM
-			document.write('<div style="position: absolute; top: 130px; left: 650px" id="pricetnost">Příčetnost:' +this.Sanity+'</div>');      
+     
 //
-		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-4">');
+		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-3">');
 		
 		//printing activites
 		document.write('<div>');
@@ -38,7 +37,7 @@ var jadernak = {
 			};
 		document.write('</div>');
 		document.write('</div>');
-  		document.write('<div class="col-xs-4">');
+  		document.write('<div class="col-xs-6">');
 
 		//Printing Smile, 
 		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty1.png>');
