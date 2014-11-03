@@ -14,6 +14,9 @@ Významné verze:
 PreAlpha 0.0
 http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/prealpha_0_0/index.html
 
+PreAlpha 0.2 (Preview)
+http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/preview/index.html
+
 
 Vize
 -----------------------------------
