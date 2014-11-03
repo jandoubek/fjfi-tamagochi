@@ -45,7 +45,7 @@ var semestr = {
 			this.Credits+=this.Subjects[id].Credits;
 			document.getElementById("kredity").innerHTML = 'Kreditů: '+this.Credits;
 			alert("Udělal jsi zkoušku z předmětu:"+this.Subjects[id].Name);
-			jadernak.update(this.Subjects[id].Health,this.Subjects[id].Knowledge);
+			jadernak.update(this.Subjects[id].Health,this.Subjects[id].Knowledge,20);
 
 			//smaz pedmet
 			var elem = document.getElementById(Name);
@@ -54,7 +54,7 @@ var semestr = {
 		else
 		{
 			alert("Neudělal jsi zkoušku z předmětu:"+this.Subjects[id].Name);
-			jadernak.update(this.Subjects[id].Health,this.Subjects[id].Knowledge);
+			jadernak.update(this.Subjects[id].Health,this.Subjects[id].Knowledge,-20);
 		}
 
 	},
