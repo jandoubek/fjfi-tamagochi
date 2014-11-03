@@ -1,78 +1,120 @@
-function aktivita(nazev,cas,zdravi,znalosti){
-	this.nazev=nazev;
-	this.cas=cas;
-	this.zdravi=zdravi;
-	this.znalosti=znalosti;
+function activity(Name,Time,Health,Knowledge,Sanity){
+	this.Name=Name;
+	this.Time=Time;
+	this.Health=Health;
+	this.Knowledge=Knowledge;
+	this.Sanity=Sanity;
 }
 
 
 var jadernak = {
-	zdravi:10,
-	znalosti:0,
-	aktivity:Array(),
+	Health:20,
+	Knowledge:0,
+	Sanity:30,
+	Activites:Array(),
 		
 	init : function(){
 
 		//nacteni aktivit - mohlo by byt ze souboru
-		this.aktivity[0]=new aktivita("Spánek",2,1,-5);
-		this.aktivity[1]=new aktivita("Učení",2,-10,+10);
-		this.aktivity[2]=new aktivita("Pivo",2,10,-5);
-
-		//zobrazení panacka, zatím jen obrazek smajlika
-		document.write('<img style="position: absolute; top: 100px; left: 100px" id="jadernak_img" src=img/smile_zluty.png>');
-
-		//zobrazeni aktivit
-		document.write('<div style="position: absolute; top: 100px; left: 50px">');
-		for (var i=0; i<this.aktivity.length; i++) {
-			document.write('<div id="'+this.aktivity[i].nazev+'"> <button type="button" class="btn btn-lg btn-success" onClick="jadernak.onClick(\''+this.aktivity[i].nazev+'\')">'+this.aktivity[i].nazev +'</button> </div>');
+		//activites loading
+		this.Activites[0]=new activity("Spánek",4,25,0,20);
+		this.Activites[1]=new activity("Učení",4,-10,40,-20);
+		this.Activites[2]=new activity("Pivo",4,20,-10,40);
+		
+    		//printing Knowledges and Health
+        	document.write('<div class="container"><div class="row top2"><div class="col-xs-3"><p class="text-center"><strong>Aktivity</strong></p></div><div class="col-xs-2">');
+			document.write('<div class="text-center" id="zdravi">Zdravi:' +this.Health+'</div></div><div class="col-xs-2">');
+			document.write('<div class="text-center" id="znalosti">Znalosti:'+this.Knowledge+'</div></div><div class="col-xs-2"><div class="text-center" id="pricetnost">Příčetnost:' +this.Sanity+'</div></div><div class="col-xs-3"><p class="text-center"><strong>Udalosti</strong></p></div></div></div>');
+			
+     
+//
+		document.write('<div class="container"><div class="row top1" style="background: rgba(220,220,220,0.4); border-radius:5px;"><div class="col-xs-3">');
+		
+		//printing activites
+		document.write('<div>');
+		for (var i=0; i<this.Activites.length; i++) {
+			document.write('<div id="'+this.Activites[i].Name+'"> <button type="button" class="btn btn-lg btn-default btn-block" onClick="jadernak.onClick(\''+this.Activites[i].Name+'\')">'+this.Activites[i].Name +'</button> </div>');
 			};
 		document.write('</div>');
+		document.write('</div>');
+  		document.write('<div class="col-xs-6">');
 
-		//zobrazeni Zdraví Znalostí
-			document.write('<div style="position: absolute; top: 100px; left: 200px" id="zdravi">Zdravi:' +this.zdravi+'</div>');
-			document.write('<div style="position: absolute; top: 100px; left: 400px" id="znalosti">Znalosti:'+this.znalosti+'</div>');
+		//Printing Smile, 
+		document.write('<div class="product-img "><img  class="img-responsive" id="jadernak_img" src=img/smile_zluty1.png>');
+		document.write('</div></div>');
+		
+
+		
+
+
 
 		},
 
-	onClick: function(nazev){
+	onClick: function(Name){
 
 		
-		//najdi predmet
-		for (var id=0; id<this.aktivity.length; id++) {
- 			if(this.aktivity[id].nazev === nazev) {
+		//find Activity index
+		for (var id=0; id<this.Activites.length; id++) {
+ 			if(this.Activites[id].Name === Name) {
 				break;
 	  		}
 		}
 						
-		//oznameni dalsim objektum
-		semestr.updateHodiny(-this.aktivity[id].cas);
-
-		//update sam sebe
-		this.update(this.aktivity[id].zdravi,this.aktivity[id].znalosti);
-
-		if(nazev=="Pivo")
+		if(jadernak.Health>=-this.Activites[id].Health && jadernak.Knowledge>=-this.Activites[id].Knowledge && jadernak.Sanity>=-this.Activites[id].Sanity)
 		{
-			document.getElementById("jadernak_img").src="img/smile_cerveny.png";		
-			setTimeout("jadernak.update(0,0)", 500);
-		}
-	},
-	
-	update: function(zdravi, znalosti){	
+			//uprate ostatnich objektu
+			semestr.update(-this.Activites[id].Time);
 
-		//update vnitrich hodnot
-		this.zdravi+=zdravi;
-		this.znalosti+=znalosti;
+			//update sam sebe
+			this.update(this.Activites[id].Health,this.Activites[id].Knowledge,this.Activites[id].Sanity);
 
-		//překresleni
-		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.zdravi;
-		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.znalosti;
+			if(Name=="Pivo")
+			{
+				document.getElementById("jadernak_img").src="img/smile_cerveny1.png";		
+				setTimeout("jadernak.update(0,0,0)", 500);
+			}
 
-		if(this.zdravi>0){
-			document.getElementById("jadernak_img").src="img/smile_zluty.png";
 		}
 		else
 		{
-			document.getElementById("jadernak_img").src="img/smile_zeleny.png";
+			alert("Nelze");
+		}
+
+	},
+	
+	update: function(Health, Knowledge,Sanity){	
+
+		//update vnitrich hodnot
+		this.Health+=Health;
+		this.Knowledge+=Knowledge;
+		this.Sanity+=Sanity;
+
+		if(this.Health<0)
+			this.Health=0;
+
+		if(this.Health>100)
+			this.Health=100;
+
+		if(this.Sanity<0)
+			this.Sanity=0;
+		
+		if(this.Sanity>100)
+			this.Sanity=100;
+
+		if(this.Knowledge<0)
+			this.Knowledge=0;
+
+		//překresleni
+		document.getElementById("zdravi").innerHTML = 'Zdravi: '+this.Health;
+		document.getElementById("znalosti").innerHTML = 'Znalosti: '+this.Knowledge;
+		document.getElementById("pricetnost").innerHTML = 'Příčetnost: '+this.Sanity;
+
+		if(this.Health<20 || this.Sanity<20){
+			document.getElementById("jadernak_img").src="img/smile_zeleny1.png";
+		}
+		else
+		{
+			document.getElementById("jadernak_img").src="img/smile_zluty1.png";
 		}
 	
 	}
