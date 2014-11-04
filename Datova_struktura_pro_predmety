@@ -1,0 +1,53 @@
+{
+    "id": "ZPRO",
+    "name": "Zaklady programovani",
+    "know": 40,
+    "credits": 4,
+    "week_start": 12,
+    "week_end": 15,
+    
+}
+
+
+
+{
+    "id": "MA1_Z1",
+    "name": "Matematická analýza 1 zapocet 1",
+    "know": 20,
+    "credits": 0,
+    "week_start": 5,
+    "week_end": 6,
+    
+}
+
+{
+    "id": "MA1_Z2",
+    "name": "Matematická analýza 1 zapocet 2",
+    "know": 20,
+    "credits": 0,
+    "week_start": 12,
+    "week_end": 13,
+    
+}
+
+
+
+{
+    "id": "MA1",
+    "name": "Matematická analýza 1",
+    "know": 0,
+    "credits": 4,
+    "week_start": 13,
+    "week_end": 13,
+    "req": ["MA1_Z1", "MA1_Z2"]
+}
+
+{
+    "id": "MA1ZK",
+    "name": "Matematická analýza 1 Zkouska",
+    "know": 40,
+    "credits": 4,
+    "week_start": 13,
+    "week_end": 18,
+    "req": ["MA1"]
+}
