@@ -13,16 +13,16 @@
 <body>
  	<div class="container top1"> 
  	     <div class="row-fluid">
-      <div class="col-xs-2"> </div>
+      <div class="col-xs-2"> <img src="image/logo.png" style="height:75px">  </div>
   		<div class="col-xs-8"><h1 class="text-center">Jaderňák alpha 0.3</h1></div>
       <div class="col-xs-2"></div>
    </div> 
   </div>
   <div class="container"> 
-    <div>
-      <div class="col-xs-4"><div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-4"> 
 	        <div class="row pozadi">
-          <!-- Stazeno z bootsnipu -->               
+          <!-- Progress bar - Stazeno z bootsnipu -->               
               <div class="progress">
               <div id="health_id" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                 <span class="sr-only">60% Complete</span>
@@ -44,11 +44,17 @@
               <span class="progress-type">Znalosti</span>
               <span id="knowledge_id2" class="progress-completed">0%</span>
               </div>
-	     </div>
-    </div>
-    <div class="container-fluid top3" >
-        <div id="activites_id" class="row">
-        </div>
+	     </div> 
+        <!-- Tabule pro kredity, cas,... -->   
+         <div class="row top2" >
+         <div class="row  text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Kredity: <span id="credits_id">0</span></div> </div>
+         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Týden: <span id="week_id">0</span></div> </div>
+         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Čas: <span id="hours_id">0</span></div>  </div>
+         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Message: <span id="message_id">0</span></div> </div>
+         </div>
+         <!-- Cast pro aktivity... -->  
+    <div class="row top3" >
+        <div id="activites_id" class="row"></div>
     </div>
   </div>
     
@@ -60,11 +66,7 @@
     </div>
     </div>
 
-<!-- FUJ -->
-   <div class="col-xs-4 pozadi">Kredity: <span id="credits_id">0</span></div>
-   <div class="col-xs-4 pozadi">Týden: <span id="week_id">0</span></div>
-   <div class="col-xs-4 pozadi">Zbývající hodiny v týdnu: <span id="hours_id">0</span></div>
-   <div class="col-xs-4 pozadi">Message: <span id="message_id">0</span></div>
+  
 <!--------->
   
 
