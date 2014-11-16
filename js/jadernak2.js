@@ -4,6 +4,7 @@ var jadernak = {
 	Knowledge:0,
 	Sanity:30,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
+	newstate:1,
 	Week:15,
 	Hours:168,
 	Credits:0,
@@ -14,6 +15,8 @@ var jadernak = {
 		for (var i=0; i<Activites.length; i++) {
 			document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.onActivity(\''+Activites[i].Name+'\')" >'+Activites[i].Name+'</button> </div>';
 			};
+
+		this.Draw();
 
 		this.ShowSubjects();
 	},

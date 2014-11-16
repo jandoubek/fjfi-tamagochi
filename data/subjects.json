@@ -14,7 +14,7 @@ var Subjects = [
     "succes_animation":"jadro_2.png",
     "fail_animation":"jadro_0.png",
     "background":"pc.jpg",
-    "animation_time":1000  
+    "animation_time":3000  
 },
 
 {
@@ -32,7 +32,7 @@ var Subjects = [
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
-    "animation_time":1000     
+    "animation_time":3000     
 },
 
 {
@@ -50,7 +50,7 @@ var Subjects = [
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
-    "animation_time":1000     
+    "animation_time":3000     
 },
 
 {
@@ -68,7 +68,7 @@ var Subjects = [
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
-    "animation_time":1000     	
+    "animation_time":3000     	
 },
 
 {
@@ -86,7 +86,7 @@ var Subjects = [
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
-    "animation_time":1000    
+    "animation_time":3000    
 }
 
 ];
