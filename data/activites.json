@@ -10,7 +10,10 @@ var Activites = [
 		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"oktoberfest3.jpg"
+    "Background":"oktoberfest3.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":0
 },
 
 {
@@ -18,12 +21,15 @@ var Activites = [
     "Health": 10,
     "Knowledge": 0,
     "Sanity": 2,
-    "Animation": [["jadro_1.png", "jadro_1.png","jadro_1.png"],
-		  ["jadro_1.png", "jadro_1.png","jadro_1.png"],
-		  ["jadro_1.png", "jadro_1.png","jadro_1.png"]
+    "Animation": [["spanek.png", "spanek.png","spanek.png"],
+		  ["spanek.png", "spanek.png","spanek.png"],
+		  ["spanek.png", "spanek.png","spanek.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg"
+    "Background":"pozadi.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":0
 },
 
 {
@@ -31,12 +37,15 @@ var Activites = [
     "Health": -5,
     "Knowledge": 20,
     "Sanity": -10,
-    "Animation": [["jadro_0.png", "jadro_0.png","jadro_0.png"],
-		  ["jadro_0.png", "jadro_0.png","jadro_0.png"],
-		  ["jadro_0.png", "jadro_0.png","jadro_0.png"]
+    "Animation": [["uceni.png", "uceni.png","uceni.png"],
+		  ["uceni.png", "uceni.png","uceni.png"],
+		  ["uceni.png", "uceni.png","uceni.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg"
+    "Background":"pozadi.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":1
 }
 
 ];

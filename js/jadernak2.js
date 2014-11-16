@@ -5,16 +5,13 @@ var jadernak = {
 	Sanity:30,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:15,
+	Week:1,
 	Hours:168,
 	Credits:0,
 
 	init : function(){
 
-		//show activites
-		for (var i=0; i<Activites.length; i++) {
-			document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.onActivity(\''+Activites[i].Name+'\')" >'+Activites[i].Name+'</button> </div>';
-			};
+		this.ShowActivites();
 
 		this.Draw();
 
@@ -23,7 +20,6 @@ var jadernak = {
 
 	
 	onActivity: function(Name){
-		var newstate=0;
 
 		//find Activity index
 		for (var id=0; id<Activites.length; id++) {
@@ -93,6 +89,9 @@ var jadernak = {
 		document.getElementById("credits_id").innerHTML= this.Credits;
 		document.getElementById("week_id").innerHTML= this.Week;
 		document.getElementById("hours_id").innerHTML= this.Hours;
+
+		//is current activities available?			
+		this.ShowActivites();
 	},
 
 	Update:function()
@@ -101,7 +100,23 @@ var jadernak = {
 		document.getElementById("message_id").innerHTML="";
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
 		document.body.style.backgroundImage="url('image/pozadi.jpg')";
+	},
 
+	ShowActivites: function()
+	{
+		document.getElementById("activites_id").innerHTML="";
+		//show activites
+		for (var i=0; i<Activites.length; i++) {
+			if(Activites[i].week_start<=this.Week && this.Week <=Activites[i].week_end )
+				if(Activites[i].minstate<=this.newstate)
+				{
+					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.onActivity(\''+Activites[i].Name+'\')" >'+Activites[i].Name+'</button> </div>';
+				}
+				else
+				{
+					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block" >'+Activites[i].Name+'INACTIVE'+'</button> </div>';
+				}
+			};
 	},
 	
 	ShowSubjects: function()
