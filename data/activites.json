@@ -1,0 +1,43 @@
+var Activites = [
+
+{
+    "Name": "Pívo",
+    "Health": 1,
+    "Knowledge":-10,
+    "Sanity": 20,
+    "Animation": [["pivo_0_0.png", "pivo_0_1.png","pivo_0_2.png"],
+		  ["pivo_1_0.png", "pivo_1_1.png","pivo_1_2.png"],
+		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
+		 ],
+    "AnimationTime":1000,
+    "Background":"oktoberfest3.jpg"
+},
+
+{
+    "Name": "Spánek",
+    "Health": 10,
+    "Knowledge": 0,
+    "Sanity": 2,
+    "Animation": [["jadro_1.png", "jadro_1.png","jadro_1.png"],
+		  ["jadro_1.png", "jadro_1.png","jadro_1.png"],
+		  ["jadro_1.png", "jadro_1.png","jadro_1.png"]
+		 ],
+    "AnimationTime":1000,
+    "Background":"pozadi.jpg"
+},
+
+{
+    "Name": "Učeni",
+    "Health": -5,
+    "Knowledge": 20,
+    "Sanity": -10,
+    "Animation": [["jadro_0.png", "jadro_0.png","jadro_0.png"],
+		  ["jadro_0.png", "jadro_0.png","jadro_0.png"],
+		  ["jadro_0.png", "jadro_0.png","jadro_0.png"]
+		 ],
+    "AnimationTime":1000,
+    "Background":"pozadi.jpg"
+}
+
+];
+
