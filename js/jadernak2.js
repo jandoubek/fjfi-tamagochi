@@ -114,7 +114,7 @@ var jadernak = {
 				}
 				else
 				{
-					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block" >'+Activites[i].Name+'INACTIVE'+'</button> </div>';
+					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block disabled="disabled"" >'+Activites[i].Name+'</button> </div>';
 				}
 			};
 	},
@@ -148,11 +148,11 @@ var jadernak = {
 				{
 					if(j==Subjects[i].req.length)
 					{
-						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-lg btn-default btn-block" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')" >'+Subjects[i].name+'</button> </div>';
+						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')" ><b>'+Subjects[i].name+'</b></button> </div>';
 					}
 					else
 					{
-						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-lg btn-default btn-block">'+Subjects[i].name+' NOT REQ'+'</button> </div>';			
+						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg disabled="disabled""><b>'+Subjects[i].name+'</b> nedostupný-nesplněné požadavky'+'</button> </div>';			
 					}					
 					count++;
 					shown=1;	
@@ -160,7 +160,7 @@ var jadernak = {
 
 				if(count<5 && shown==0 && this.Week <=Subjects[i].week_end)
 				{
-					document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-lg btn-default btn-block" >'+Subjects[i].name+' NOT TIME'+'</button> </div>';
+					document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg disabled="disabled"" ><b>'+Subjects[i].name+'</b> dostupný od: '+Subjects[i].week_start+' týdne'+'</button> </div>';
 					count++;
 				}
 			};
