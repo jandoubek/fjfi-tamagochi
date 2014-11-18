@@ -1,0 +1,52 @@
+var Activites = [
+
+{
+    "Name": "Pívo",
+    "Health": 1,
+    "Knowledge":-10,
+    "Sanity": 20,
+    "Animation": [["pivo_0_0.png", "pivo_0_1.png","pivo_0_2.png"],
+		  ["pivo_1_0.png", "pivo_1_1.png","pivo_1_2.png"],
+		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
+		 ],
+    "AnimationTime":3000,
+    "Background":"oktoberfest3.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":0
+},
+
+{
+    "Name": "Spánek",
+    "Health": 10,
+    "Knowledge": 0,
+    "Sanity": 2,
+    "Animation": [["spanek.png", "spanek.png","spanek.png"],
+		  ["spanek.png", "spanek.png","spanek.png"],
+		  ["spanek.png", "spanek.png","spanek.png"]
+		 ],
+    "AnimationTime":3000,
+    "Background":"pozadi.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":0
+},
+
+{
+    "Name": "Učeni",
+    "Health": -5,
+    "Knowledge": 20,
+    "Sanity": -10,
+    "Animation": [["uceni.png", "uceni.png","uceni.png"],
+		  ["uceni.png", "uceni.png","uceni.png"],
+		  ["uceni.png", "uceni.png","uceni.png"]
+		 ],
+    "AnimationTime":3000,
+    "Background":"pozadi.jpg",
+    "week_start": 1,
+    "week_end": 18,
+    "minstate":1
+}
+
+];
+
