@@ -17,6 +17,9 @@ http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/p
 PreAlpha 0.2 (Preview)
 http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/preview/index.html
 
+Alpha 0.3 (Demo)
+http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/demo/index.html
+
 
 Vize
 -----------------------------------
