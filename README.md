@@ -23,7 +23,7 @@ http://htmlpreview.github.io/?https://github.com/jandoubek/fjfi-tamagochi/blob/d
 
 Vize
 -----------------------------------
-v.0: “Zábavnou a vtipnou formou ukázat studentský život jaderňáka.”
+v.1: “Zábavnou, vtipně a jednoduše ukázat studentský život jaderňáka.”
 
 Tým
 -----------------------------------
