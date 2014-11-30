@@ -15,7 +15,7 @@ var jadernak = {
 
 		this.Draw();
 
-		this.ShowSubjects();
+	
 	},
 
 	
