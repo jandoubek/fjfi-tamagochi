@@ -109,10 +109,14 @@ var jadernak = {
 
 		switch(number)
 		{
+//======================ABSTRACT LAYER ENTRY POINT================================================
 			case 1: pokus1.update(number,action);
-					break;
+				break;
 			case 2: pokus2.update(number,action);
-					break;					
+				break;	
+			case 3: sixbeer.update(number,action);
+				break;					
+//================================================================================================
 		}
 
 	},
