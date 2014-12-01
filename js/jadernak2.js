@@ -13,6 +13,8 @@ var jadernak = {
 
 		this.ShowActivites();
 
+		this.ShowSubjects();		
+
 		this.Draw();
 
 	
@@ -121,7 +123,18 @@ var jadernak = {
 	
 	ShowSubjects: function()
 	{
-		document.getElementById("subjects_id").innerHTML="";
+		//begin sections
+		var subjects_select='<ul class="nav nav-pills nav-stacked col-md-3">';
+		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-md-5">';
+
+		//show clicable subject
+		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logo.png" style="height:50px"> </a></li>';
+		//tab content:
+		subject_tab_content+='<div class="tab-pane active" id="tabid_index">';
+		subject_tab_content+='<h4>INDEX</h4>';
+		subject_tab_content+='<p>To je přehlad zapsaných předmětů</p>';
+	    subject_tab_content+='</div>';	
+
 		var count=0;
 		var shown=0;
 		for (var i=0; i<Subjects.length; i++) 
@@ -148,11 +161,25 @@ var jadernak = {
 				{
 					if(j==Subjects[i].req.length)
 					{
-						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')" ><b>'+Subjects[i].name+'</b></button> </div>';
+						//show clicable subject
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"></a></li>';
+						//tab content:
+						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
+						subject_tab_content+='<h4>'+Subjects[i].name+'</h4>';
+						subject_tab_content+='<p>'+Subjects[i].description+'</p>';
+						subject_tab_content+='<button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')">Zkusit</button> ';
+						subject_tab_content+='</div>';		
 					}
 					else
 					{
-						document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg disabled="disabled""><b>'+Subjects[i].name+'</b> nedostupný-nesplněné požadavky'+'</button> </div>';			
+						//show unclicable due unsatisfied requirements
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"></a></li>';
+						//tab content:
+						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
+						subject_tab_content+='<h4>'+Subjects[i].name+'</h4>';
+						subject_tab_content+='<p><i>Tento předmět nemůžete absolvovat, protože jeho požadavky nejsou splněny.</i></p>';
+						subject_tab_content+='</div>';		
+						
 					}					
 					count++;
 					shown=1;	
@@ -160,12 +187,26 @@ var jadernak = {
 
 				if(count<5 && shown==0 && this.Week <=Subjects[i].week_end)
 				{
-					document.getElementById("subjects_id").innerHTML+='<div class="col-xs-4"><button type="button" class=class="btn btn-primary btn-lg disabled="disabled"" ><b>'+Subjects[i].name+'</b> dostupný od: '+Subjects[i].week_start+' týdne'+'</button> </div>';
+					//show unclicable due no time for subject
+					subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"></a></li>';
+					//tab content:
+					subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
+					subject_tab_content+='<h4>'+Subjects[i].name+'</h4>';
+					subject_tab_content+='<p><i>Tento předmět je k dispozici od '+Subjects[i].week_start+' týdne.</i></p>';
+					subject_tab_content+='</div>';		
+									
 					count++;
 				}
 			};
 		
 		};
+
+		//end sections
+		subjects_select+='</ul>';
+		subject_tab_content+='</div>'
+
+		document.getElementById("subjects_id").innerHTML=subjects_select+subject_tab_content;
+		
 
 	},
 
