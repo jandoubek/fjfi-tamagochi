@@ -4,7 +4,6 @@ var sixbeer = {
 		{
 			if(action==="Pívo")
 			{
-				alert("Pivko");
 				this.count=this.count+1;
 			}
 			else
