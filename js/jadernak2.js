@@ -46,7 +46,7 @@ var jadernak = {
 		document.body.style.backgroundImage="url('image/"+Activites[id].Background+"')";
 	
 		//delay time of activity, than call update, which show normal jadernak
-		setTimeout("jadernak.Update()", Activites[id].AnimationTime);
+		setTimeout("jadernak.Update(0,'"+Activites[id].Name+"')", Activites[id].AnimationTime);
 	
 	},
 
@@ -99,12 +99,22 @@ var jadernak = {
 	},
 
 //-------------------------------------------------------------------------------------------------------
-	Update:function()//function setting base image, called by onFunc by Timeout, end of every animated action.
+	Update:function(number,action)//function setting base image, called by onFunc by Timeout, end of every animated action, called itself
 	{
+		number=number+1;
 		this.state=this.newstate;
 		document.getElementById("message_id").innerHTML="";
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
 		document.body.style.backgroundImage="url('image/pozadi.jpg')";
+
+		switch(number)
+		{
+			case 1: pokus1.update(number,action);
+					break;
+			case 2: pokus2.update(number,action);
+					break;					
+		}
+
 	},
 
 //-----------------------------------------------------------------------------------------------------------------------
@@ -242,10 +252,10 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].succes_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			document.getElementById("message_id").innerHTML=Subjects[id].succes_message;
+			document.getElementById("message_id").innerHTML='<h1>'+Subjects[id].succes_message+'</h1>';
 
 			//delay time of activity, than call update, which show normal jadernak
-			setTimeout("jadernak.Update()", Subjects[id].animation_time);	
+			setTimeout("jadernak.Update(0'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
 					
 		}
 		else
@@ -262,10 +272,10 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].fail_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			document.getElementById("message_id").innerHTML=Subjects[id].fail_message;
+			document.getElementById("message_id").innerHTML='<h1>'+Subjects[id].fail_message+'</h1>';
 
 			//delay time of activity, than call update, which show normal jadernak
-			setTimeout("jadernak.Update()", Subjects[id].animation_time);
+			setTimeout("jadernak.Update(0,'failed_"+Subjects[id].id+"')", Subjects[id].animation_time);
 		}		
 
 		this.ShowSubjects();
