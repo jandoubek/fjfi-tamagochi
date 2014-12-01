@@ -8,8 +8,6 @@
     
 }
 
-
-
 {
     "id": "MA1_Z1",
     "name": "Matematická analýza 1 zapocet 1",
@@ -30,8 +28,6 @@
     
 }
 
-
-
 {
     "id": "MA1",
     "name": "Matematická analýza 1",
@@ -50,4 +46,44 @@
     "week_start": 13,
     "week_end": 18,
     "req": ["MA1"]
+}
+
+{
+    "id": "LA1_Z1",
+    "name": "Lineární algebra 1 zapocet 1",
+    "know": 15,
+    "credits": 0,
+    "week_start": 5,
+    "week_end": 6,
+    
+}
+
+{
+    "id": "LA1_Z2",
+    "name": "Lineární algebra 1 zapocet 2",
+    "know": 15,
+    "credits": 0,
+    "week_start": 12,
+    "week_end": 13,
+    
+}
+
+{
+    "id": "LA1",
+    "name": "Lineární algebra 1",
+    "know": 0,
+    "credits": 2,
+    "week_start": 13,
+    "week_end": 13,
+    "req": ["LA1_Z1", "LA1_Z2"]
+}
+
+{
+    "id": "LA1ZK",
+    "name": "Lineární algebra 1 Zkouska",
+    "know": 20,
+    "credits": 2,
+    "week_start": 13,
+    "week_end": 18,
+    "req": ["LA1"]
 }
