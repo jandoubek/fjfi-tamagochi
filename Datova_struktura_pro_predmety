@@ -87,3 +87,58 @@
     "week_end": 18,
     "req": ["LA1"]
 }
+
+{
+    "id": "DEF",
+    "name": "Dějiny fyziky",
+    "know": 10,
+    "credits": 2,
+    "week_start": 12,
+    "week_end": 14,
+    
+}
+
+{
+    "id": "PT",
+    "name": "Přípravný týden",
+    "know": 5,
+    "credits": 2,
+    "week_start": 0,
+    "week_end": 1,
+    
+}
+
+
+{
+    "id": "MECH",
+    "name": "Mechanika",
+    "know": 40,
+    "credits": 4,
+    "week_start": 12,
+    "week_end": 13,
+    
+}
+
+{
+    "id": "MECH ZK",
+    "name": "Mechanika zkouška",
+    "know": 20,
+    "credits": 2,
+    "week_start": 13,
+    "week_end": 16,
+    "req": ["MECH"]
+}
+
+{
+    "id": "MAM",
+    "name": "Matematicke minimum",
+    "know": 15,
+    "credits": 2,
+    "week_start": 12,
+    "week_end": 13,
+    
+}
+
+
+
+
