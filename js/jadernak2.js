@@ -9,6 +9,7 @@ var jadernak = {
 	Hours:168,
 	Credits:0,
 
+//------------------------------------------------------------------------------------------------
 	init : function(){
 
 		this.ShowActivites();
@@ -20,7 +21,7 @@ var jadernak = {
 	
 	},
 
-	
+//------------------------------------------------------------------------------------------------	
 	onActivity: function(Name){
 
 		//find Activity index
@@ -49,13 +50,14 @@ var jadernak = {
 	
 	},
 
-	Draw:function()
+//---------------------------------------------------------------------------------------------------------------
+	Draw:function()     //Called for redraw bars etc, called by every action which change inner variables
 	{
 		if(this.Hours<=0)
 		{
 			this.Week++;
 			this.Hours=168;
-			this.ShowSubjects();
+			this.ShowSubjects(); 
 		}
 
 		//check consistent
@@ -96,7 +98,8 @@ var jadernak = {
 		this.ShowActivites();
 	},
 
-	Update:function()
+//-------------------------------------------------------------------------------------------------------
+	Update:function()//function setting base image, called by onFunc by Timeout, end of every animated action.
 	{
 		this.state=this.newstate;
 		document.getElementById("message_id").innerHTML="";
@@ -104,7 +107,8 @@ var jadernak = {
 		document.body.style.backgroundImage="url('image/pozadi.jpg')";
 	},
 
-	ShowActivites: function()
+//-----------------------------------------------------------------------------------------------------------------------
+	ShowActivites: function()//redraw activitis (if is available), called by every draw, after every change
 	{
 		document.getElementById("activites_id").innerHTML="";
 		//show activites
@@ -121,7 +125,8 @@ var jadernak = {
 			};
 	},
 	
-	ShowSubjects: function()
+//--------------------------------------------------------------------------------------------------------------------------
+	ShowSubjects: function() //redraw subject menu, called when week changed, and whne some subject is clicked
 	{
 		//begin sections
 		var subjects_select='<ul class="nav nav-pills nav-stacked col-md-3">';
@@ -210,7 +215,8 @@ var jadernak = {
 
 	},
 
-	onSubject: function(Name)
+//--------------------------------------------------------------------------------------------------------------------------
+	onSubject: function(Name)//callback function for button on subject (sitting exame buttons)
 	{
 		//find id of subject
 		for (var id=0; id<Subjects.length; id++) {
