@@ -105,7 +105,7 @@ var jadernak = {
 		this.state=this.newstate;
 		document.getElementById("message_id").innerHTML="";
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
-		document.body.style.backgroundImage="url('image/pozadi.jpg')";
+		document.body.style.backgroundImage="url('image/uvodni.jpg')";
 
 		switch(number)
 		{
