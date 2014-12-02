@@ -10,7 +10,7 @@ var Activites = [
 		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"oktoberfest3.jpg",
+    "Background":"pivo.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":0
@@ -26,7 +26,7 @@ var Activites = [
 		  ["spanek.png", "spanek.png","spanek.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg",
+    "Background":"spanek.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":0
@@ -42,7 +42,7 @@ var Activites = [
 		  ["uceni.png", "uceni.png","uceni.png"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg",
+    "Background":"uceni.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":1

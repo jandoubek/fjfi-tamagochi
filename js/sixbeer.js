@@ -13,8 +13,7 @@ var sixbeer = {
 
 			if(this.count>=6)
 			{
-				document.getElementById("message_id").innerHTML="<h1><center> OPILČE!</center></h1>";
-				setTimeout("jadernak.Update("+number+",'"+action+"')", 5000);
+				jadernak.ShowAlert("<h1><center> OPILČE! </center></h1>",5000,number,action);
 			}
 			else
 				setTimeout("jadernak.Update("+number+",'"+action+"')", 5);

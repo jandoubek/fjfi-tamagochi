@@ -8,6 +8,7 @@ var jadernak = {
 	Week:1,
 	Hours:168,
 	Credits:0,
+	Timer:0,
 
 //------------------------------------------------------------------------------------------------
 	init : function(){
@@ -103,9 +104,10 @@ var jadernak = {
 	{
 		number=number+1;
 		this.state=this.newstate;
-		document.getElementById("message_id").innerHTML="";
+		this.CleanMessage();
+		this.CleanAlert();
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
-		document.body.style.backgroundImage="url('image/pozadi.jpg')";
+		document.body.style.backgroundImage="url('image/uvodni.JPG')";
 
 		switch(number)
 		{
@@ -120,7 +122,45 @@ var jadernak = {
 		}
 
 	},
+//-----------------------------------------------------------------------------------------------------------------------
+	ShowMessage: function(message)
+	{
+		document.body.innerHTML +='<div id="message_id" style="position: absolute; left: 600px; top: 50px; width: 300px; height: 200px; background: rgba(255, 255, 255, 1.0);" ><center>'+message+'</center></div>';
+	},
+//-----------------------------------------------------------------------------------------------------------------------
+	CleanMessage: function(message)
+	{
+		var elem = document.getElementById("message_id");
+		if(elem!=null)
+			elem.parentNode.removeChild(elem);
+	},
 
+//-----------------------------------------------------------------------------------------------------------------------
+	ShowAlert: function(message,timeout,number,action)
+	{
+		setTimeout("jadernak.Update("+number+",'"+action+"')", timeout);
+		alert='<div id="alert_out_id" style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);">';
+		alert+="<center>"+message+"</center>";
+		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
+		alert+='</dev>';	
+		document.body.innerHTML +=alert;
+	},
+
+//-----------------------------------------------------------------------------------------------------------------------
+	OnAlert: function(number,action)
+	{
+		clearTimeout(this.Timer);
+		this.Update(number,action);
+	},
+
+//-----------------------------------------------------------------------------------------------------------------------
+	CleanAlert: function()
+	{
+		this.Timer=0;
+		var elem = document.getElementById("alert_out_id");
+		if(elem!=null)
+			elem.parentNode.removeChild(elem);
+	},
 //-----------------------------------------------------------------------------------------------------------------------
 	ShowActivites: function()//redraw activitis (if is available), called by every draw, after every change
 	{
@@ -134,7 +174,7 @@ var jadernak = {
 				}
 				else
 				{
-					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block disabled="disabled"" >'+Activites[i].Name+'</button> </div>';
+					document.getElementById("activites_id").innerHTML+='<div class="col-xs-4"><button type="button" class="btn btn-default navbar-btn btn-block disabled=disabled" >'+Activites[i].Name+'</button> </div>';
 				}
 			};
 	},
@@ -256,7 +296,7 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].succes_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			document.getElementById("message_id").innerHTML='<h1>'+Subjects[id].succes_message+'</h1>';
+			this.ShowMessage('<h1>'+Subjects[id].succes_message+'</h1>');
 
 			//delay time of activity, than call update, which show normal jadernak
 			setTimeout("jadernak.Update(0'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
@@ -276,7 +316,7 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].fail_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			document.getElementById("message_id").innerHTML='<h1>'+Subjects[id].fail_message+'</h1>';
+			this.ShowMessage('<h1>'+Subjects[id].fail_message+'</h1>');
 
 			//delay time of activity, than call update, which show normal jadernak
 			setTimeout("jadernak.Update(0,'failed_"+Subjects[id].id+"')", Subjects[id].animation_time);

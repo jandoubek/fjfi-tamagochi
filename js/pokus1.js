@@ -7,8 +7,7 @@ var pokus1 = {
 			if(jadernak.Knowledge>50 && this.done==0)
 			{
 				this.done=1;
-				document.getElementById("message_id").innerHTML="<h1><center> Šprt!</center></h1>";
-				setTimeout("jadernak.Update("+number+",'"+action+"')", 5000);
+				jadernak.ShowAlert("<h1><center> Šprt!</center></h1>",5000,number,action);
 			}
 			else
 				setTimeout("jadernak.Update("+number+",'"+action+"')", 5);
