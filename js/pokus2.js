@@ -7,7 +7,8 @@ var pokus2 = {
 			if(jadernak.Knowledge>70 && this.done==0)
 			{
 				this.done=1;
-				jadernak.ShowAlert("<h1><center> Super Šprt!</center></h1>",5000,number,action);
+				jadernak.ShowAlert("<h1><center> Super Šprt!</center></h1>",number, action);
+				setTimeout("jadernak.Update("+number+",'"+action+"')", 5000);	
 			}
 			else
 				setTimeout("jadernak.Update("+number+",'"+action+"')", 5);

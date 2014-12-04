@@ -136,9 +136,8 @@ var jadernak = {
 	},
 
 //-----------------------------------------------------------------------------------------------------------------------
-	ShowAlert: function(message,timeout,number,action)
+	ShowAlert: function(message,number,action)
 	{
-		setTimeout("jadernak.Update("+number+",'"+action+"')", timeout);
 		alert='<div id="alert_out_id" style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);">';
 		alert+="<center>"+message+"</center>";
 		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
@@ -299,7 +298,7 @@ var jadernak = {
 			this.ShowMessage('<h4>'+Subjects[id].succes_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
-			setTimeout("jadernak.Update(0'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
+			setTimeout("jadernak.Update(0,'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
 					
 		}
 		else
