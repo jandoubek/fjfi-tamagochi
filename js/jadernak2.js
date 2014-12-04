@@ -126,7 +126,6 @@ var jadernak = {
 	ShowMessage: function(message)
 	{
 		document.getElementById("message_id").innerHTML='<div class="bubble" id="message_inner_id"><center>'+message+'</center></div>';
-		document.getElementById("message_id").style.background='rgba(255, 255, 255, 0.0)';
 	},
 //-----------------------------------------------------------------------------------------------------------------------
 	CleanMessage: function(message)
