@@ -125,12 +125,13 @@ var jadernak = {
 //-----------------------------------------------------------------------------------------------------------------------
 	ShowMessage: function(message)
 	{
-		document.body.innerHTML +='<div id="message_id" style="position: absolute; left: 600px; top: 50px; width: 300px; height: 200px; background: rgba(255, 255, 255, 1.0);" ><center>'+message+'</center></div>';
+		document.getElementById("message_id").innerHTML='<div class="bubble" id="message_inner_id"><center>'+message+'</center></div>';
+		document.getElementById("message_id").style.background='rgba(255, 255, 255, 0.0)';
 	},
 //-----------------------------------------------------------------------------------------------------------------------
 	CleanMessage: function(message)
 	{
-		var elem = document.getElementById("message_id");
+		var elem = document.getElementById("message_inner_id");
 		if(elem!=null)
 			elem.parentNode.removeChild(elem);
 	},
@@ -296,7 +297,7 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].succes_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			this.ShowMessage('<h1>'+Subjects[id].succes_message+'</h1>');
+			this.ShowMessage('<h4>'+Subjects[id].succes_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
 			setTimeout("jadernak.Update(0'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
@@ -316,7 +317,7 @@ var jadernak = {
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].fail_animation;
 			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
-			this.ShowMessage('<h1>'+Subjects[id].fail_message+'</h1>');
+			this.ShowMessage('<h4>'+Subjects[id].fail_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
 			setTimeout("jadernak.Update(0,'failed_"+Subjects[id].id+"')", Subjects[id].animation_time);
