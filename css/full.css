@@ -191,6 +191,7 @@ min-height: 100%;
 }
 
 .row {
+
     height: 100%;
     min-height:100%;
     
@@ -210,7 +211,7 @@ color:#000;
  .top2{
  width:40%;
  color: #fff;
-margin-top:30%;
+margin-top:50%;
 margin-left:auto;
 margin-right:auto;
  background-color: rgba(0,0,0,1);
@@ -218,10 +219,18 @@ margin-right:auto;
   border-radius: 5px;
 }
 .top3{
-margin-top:30%;
- background-color: rgba(255,255,255,0.5); 
+margin-top:50%;
+margin-bottom:1%;
+margin-left:auto;
+margin-right:auto;
+
+ background-color: rgba(255,255,255,0.7); 
  border: 1px solid black;
   border-radius: 5px;
+}
+.top4{
+margin-left:auto;
+margin-right:auto;
 }
 
 
@@ -251,4 +260,33 @@ margin-top:30%;
 color:#fff;
 margin-top:5px;
 margin-bottom:5px
+}
+
+/* Super tlacitka*/
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+.btn-primary.btn-outline {
+    color: #000000;
+      background-color: #fff;
+      	font-weight: 600;
+}
+.btn-primary.btn-outline:hover{
+    color: #fff;
+      background-color: #000000;
+      	font-weight: 600;
+}
+
+  .bubble {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    padding: 0px;
+    background: #FFFFFF;
+    border: #000000 solid 2px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
 }
