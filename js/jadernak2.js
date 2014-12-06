@@ -117,6 +117,8 @@ var jadernak = {
 			case 2: pokus2.update(number,action);
 				break;	
 			case 3: sixbeer.update(number,action);
+				break;	
+			case 4: first_beer.update(number,action);
 				break;					
 //================================================================================================
 		}
