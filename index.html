@@ -1,11 +1,31 @@
-<!DOCTYPE HTML>
-<html lang="cz">
+<!DOCTYPE html>
+<html class="full" lang="cz">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
 <head>
-  <meta charset="UTF-8">
-  <title>Jaderňák</title>
-   <link rel="stylesheet" href="./css/bootstrap.css">	
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./font_awesome/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Full - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./font_awesome/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link href="css/full.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
     <script type="text/javascript" src="./js/jadernak2.js"></script>
     <script type="text/javascript" src="./js/pokus1.js"></script>
     <script type="text/javascript" src="./js/pokus2.js"></script>
@@ -13,86 +33,89 @@
     <script type="text/javascript" src="./data/activites.json"></script>
     <script type="text/javascript" src="./data/subjects.json"></script>
 
-<meta property="og:title" content="Jaderňák" />
-<meta property="og:site_name" content="Fjfi Tamagotchi"/>
-<meta property="og:url" content="http://kmlinux.fjfi.cvut.cz/~hanouvit/fjfi-tamagochi/index.html" />
-<meta property="og:image" content="http://kmlinux.fjfi.cvut.cz/~hanouvit/fjfi-tamagochi/image/logo.png" />
-
 </head>
-<body>
-  	<div class="container"> 
- 	<div class="container-fluid top1"> 
- 	     <div class="row-fluid">
-      <div class="col-xs-2"> <img src="image/logo.png" style="height:75px">  </div>
-  		<div class="col-xs-8"><h1 class="text-center">Jaderňák alpha 0.6_ZT</h1></div>
-      <div class="col-xs-2">
-      <div class="row-fluid">
-       <div class="col-xs-3">
 
-    </div>   <div class="col-xs-9">
-      <div id="contentframe" style="top: 75px;">
-
-      <iframe src="http://www.facebook.com/plugins/share_button.php?href=http://kmlinux.fjfi.cvut.cz/~hanouvit/fjfi-tamagochi/index.html&layout=button" frameborder="0"width="100%" height="75px" margin-top="20px"></iframe>	
-
+<body> 
+<!-- Navbar fixed --> 
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <p class="navbar-brand" style="color:ffffff">Jaderňák 0.5</p>
     </div>
-      </div>
-      </div>
-      </div> 
-      </div> 
-  </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+         <li><a class="navbar-brand" href="http://intranet.cvut.cz/cs"><img style="max-width:55px; margin-top: -10px;" title="České vysoké učení technické v Praze" src="image/logocvut.png"></a></li>
+         <li><a class="navbar-brand" href="http://www.fjfi.cvut.cz/"><img style="max-width:50px; margin-top: -10px;" title="Fakulta jaderná a fyzikálně inženýrska" src="image/logo.png"></a></li>
+       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-brand" href="https://github.com/jandoubek/fjfi-tamagochi" title="GitHub" target="_blank"><i class="fa fa-github fa-lg"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- /.Navbar fixed --> 
 
 
-  <div class="container-fluid"> 
-    <div class="row">
-      <div class="col-xs-4"> 
-	        <div class="row pozadi">
-          <!-- Progress bar - Stazeno z bootsnipu -->               
-              <div class="progress">
-              <div id="health_id" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                <span class="sr-only">60% Complete</span>
-              </div>
-                <span class="progress-type">Zdraví</span>
-                <span id="health_id2" class="progress-completed">0%</span>
-              </div>
-              <div class="progress">
-              <div id="sanity_id" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span class="sr-only">40% Complete (success)</span>
-              </div>
-              <span class="progress-type">Příčetnost</span>
-              <span id="sanity_id2" class="progress-completed">0%</span>
-              </div>
-              <div class="progress">
-              <div id="knowledge_id" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span class="sr-only">100% Complete (info)</span>
-              </div>
-              <span class="progress-type">Znalosti</span>
-              <span id="knowledge_id2" class="progress-completed">0%</span>
-              </div>
-	     </div> 
-        <!-- Tabule pro kredity, cas,... -->   
-         <div class="row top2" >
-         <div class="row  text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Kredity: <span id="credits_id">0</span></div> </div>
-         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Týden: <span id="week_id">0</span></div> </div>
-         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Čas: <span id="hours_id">0</span></div>  </div>
-         <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Message: <span id="message_id_old">0</span></div> </div>
-         </div>
-         <!-- Cast pro aktivity... -->  
-    <div class="row top3" >
-        <div id="activites_id" class="row"></div>
-    </div>
-  </div>
+      
+<!--Begin inner page -->
+  <div class="centered-container">
+        <div class="content">
+              <div class="container-fluid"> 
+
+                  <div class="row">
+                        <div class="col-xs-4"> 
+	                           <div class="row pozadi">
+                                  <!-- Progress bar - Stazeno z bootsnipu --> 
+                                  <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                      <span class="sr-only">60% Complete</span>
+                                    </div>
+                                  </div>              
+                                  <div class="progress">
+                                    <div id="health_id" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                      <span class="sr-only">60% Complete</span>
+                                    </div>
+                                    <span class="progress-type">Zdraví</span>
+                                    <span id="health_id2" class="progress-completed">0%</span>
+                                  </div>
+                                  <div class="progress">
+                                    <div id="sanity_id" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                      <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+                                  <span class="progress-type">Příčetnost</span>
+                                  <span id="sanity_id2" class="progress-completed">0%</span>
+                                  </div>
+                                  <div class="progress">
+                                    <div id="knowledge_id" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                      <span class="sr-only">100% Complete (info)</span>
+                                    </div>
+                                  <span class="progress-type">Znalosti</span>
+                                  <span id="knowledge_id2" class="progress-completed">0%</span>
+                                  </div>
+	                           </div> 
+                          <!-- Tabule pro kredity, cas,... -->   
+                          <div class="row top2" >
+                            <div class="row  text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Kredity: <span id="credits_id">0</span></div> </div>
+                            <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Týden: <span id="week_id">0</span></div> </div>
+                            <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Čas: <span id="hours_id">0</span></div>  </div>
+                            <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Message: <span id="message_id_old">0</span></div> </div>
+                          </div>
+                              <!-- Cast pro aktivity... -->  
+                          <div class="row top3" >
+                            <div id="activites_id" class="row"></div>
+                          </div>
+                        </div>
     
-  <div class="col-xs-4">
-  <!--Bublina-->
-	  <div id="message_id" style="background: rgba(255, 255, 255, 0.0)" >
-	  </div>
-	  <div> 
-	  <img id="jadernak_id" src="./image/jadro_1.png" class="img-responsive"/>  </div>
-	  </div> 
-<!--MENU--> 
-  <div id="subjects_id" class="col-xs-4 pozadi">
-	<!--Plocha pro MENU-->
-  </div>
+                        <div class="col-xs-4">
+                          <!--Bublina-->
+	                        <div id="message_id" style="background: rgba(255, 255, 255, 0.0)" >
+	                        </div>
+	                       <div> 
+	                         <img id="jadernak_id" src="image/jadro_1.png" class="img-responsive"/>  </div>
+	                       </div> 
+                        <!--MENU--> 
+                        <div id="subjects_id" class="col-xs-4 pozadi">
+	                     <!--Plocha pro MENU-->
+                        </div>
 
 
 <!-- Alert output  
@@ -105,24 +128,25 @@
   <script src="./js/bootstrap.min.js"></script>
   
 <!-------->    
-    </div><!-- Row -->
-    </div><!-- Container -->
-     </div><!-- Container -->
+                  </div><!-- Row -->
+            </div><!--Container -->
+        </div><!-- content -->
+  </div><!-- centered-containe -->
+    <!-- End inner page>
+    
+    
+    
+   <script type="text/javascript">
+	     jadernak.init();
+  </script>
   
-<!--------->
   
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    <script type="text/javascript">
-	jadernak.init();
-    </script>
-
-	
-  <!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  -->
-
-
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
