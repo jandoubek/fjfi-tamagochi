@@ -2,7 +2,7 @@
 var jadernak = {
 	Health:20,
 	Knowledge:0,
-	Sanity:30,
+	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
 	Week:1,
