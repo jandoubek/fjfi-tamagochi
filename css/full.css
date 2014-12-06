@@ -175,3 +175,39 @@ http://twbscolor.smarchal.com/
 .btn-vk{color:#fff;background-color:#587ea3;border-color:rgba(0,0,0,0.2)}.btn-vk:hover,.btn-vk:focus,.btn-vk:active,.btn-vk.active,.open .dropdown-toggle.btn-vk{color:#fff;background-color:#4a6a89;border-color:rgba(0,0,0,0.2)}
 .btn-vk:active,.btn-vk.active,.open .dropdown-toggle.btn-vk{background-image:none}
 .btn-vk.disabled,.btn-vk[disabled],fieldset[disabled] .btn-vk,.btn-vk.disabled:hover,.btn-vk[disabled]:hover,fieldset[disabled] .btn-vk:hover,.btn-vk.disabled:focus,.btn-vk[disabled]:focus,fieldset[disabled] .btn-vk:focus,.btn-vk.disabled:active,.btn-vk[disabled]:active,fieldset[disabled] .btn-vk:active,.btn-vk.disabled.active,.btn-vk[disabled].active,fieldset[disabled] .btn-vk.active{background-color:#587ea3;border-color:rgba(0,0,0,0.2)}
+
+
+.col-super {
+
+display: table-cell;
+min-height: 100%;
+}
+
+
+.container{
+    height: 100%;
+    min-height:;
+
+}
+
+.row {
+    height: 100%;
+    min-height:100%;
+    
+}
+.progress{
+margin-top:2%;
+margin-bottom:2%;
+color:#000;
+}
+
+.top1{
+ background-color: rgba(255,255,255,0.5);
+ padding:5px;
+ border-radius: 4px;
+}
+
+.top3{
+margin-top:20%;
+ background-color: rgba(255,255,255,0.5);
+}

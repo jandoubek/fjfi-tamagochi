@@ -59,41 +59,28 @@
 <!--Begin inner page -->
   <div class="centered-container">
         <div class="content">
-              <div class="container-fluid"> 
+              <div class="container"> 
 
                   <div class="row">
-                        <div class="col-xs-4"> 
-	                           <div class="row pozadi">
-                                  <!-- Progress bar - Stazeno z bootsnipu --> 
+                        <div class="col-xs-4 col-super"> 
+	                           <div class="row top1">
+                                  <!-- Progress bar - Stazeno z bootsnipu -->             
                                   <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                      <span class="sr-only">60% Complete</span>
-                                    </div>
-                                  </div>              
-                                  <div class="progress">
-                                    <div id="health_id" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                      <span class="sr-only">60% Complete</span>
-                                    </div>
-                                    <span class="progress-type">Zdraví</span>
-                                    <span id="health_id2" class="progress-completed">0%</span>
+                                    <div id="health_id" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">Zdraví <span id="health_id2" class="progress-completed">0%</span></div>                                  
                                   </div>
                                   <div class="progress">
                                     <div id="sanity_id" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                      <span class="sr-only">40% Complete (success)</span>
-                                    </div>
-                                  <span class="progress-type">Příčetnost</span>
-                                  <span id="sanity_id2" class="progress-completed">0%</span>
+                                      Spokojenost <span id="sanity_id2" class="progress-completed">0%</span>
+                                    </div>                                
                                   </div>
                                   <div class="progress">
                                     <div id="knowledge_id" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                      <span class="sr-only">100% Complete (info)</span>
-                                    </div>
-                                  <span class="progress-type">Znalosti</span>
-                                  <span id="knowledge_id2" class="progress-completed">0%</span>
+                                     Znalosti <span id="knowledge_id2" class="progress-completed">0%</span>
+                                    </div>                                  
                                   </div>
 	                           </div> 
                           <!-- Tabule pro kredity, cas,... -->   
-                          <div class="row top2" >
+                          <div class="row top2" style="vertical-align: middle;backgroung-color:FFFFFF" >
                             <div class="row  text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Kredity: <span id="credits_id">0</span></div> </div>
                             <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Týden: <span id="week_id">0</span></div> </div>
                             <div class="row text-center"><div class="col-xs-4 col-xs-offset-4 pozadi">Čas: <span id="hours_id">0</span></div>  </div>
@@ -132,14 +119,13 @@
             </div><!--Container -->
         </div><!-- content -->
   </div><!-- centered-containe -->
-    <!-- End inner page>
-    
+    <!-- End inner page-->
     
     
    <script type="text/javascript">
 	     jadernak.init();
   </script>
-  
+                
   
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
