@@ -279,14 +279,15 @@ margin-bottom:5px
       	font-weight: 600;
 }
 
-  .bubble {
-    position: relative;
-    width: 250px;
-    height: 100px;
-    padding: 0px;
-    background: #FFFFFF;
-    border: #000000 solid 2px;
-    -webkit-border-radius: 11px;
-    -moz-border-radius: 11px;
-    border-radius: 11px;
+.bubble 
+{
+position: relative;
+width: 250px;
+height: 125px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: #000000 solid 2px;
 }
