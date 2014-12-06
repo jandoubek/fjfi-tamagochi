@@ -38,7 +38,7 @@ var jadernak = {
 		this.Sanity+=Activites[id].Sanity;
 
 		//update time info
-		this.Hours-=4;
+		this.Hours-=8;
 
 		this.Draw();
 
