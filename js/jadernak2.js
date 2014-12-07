@@ -182,11 +182,11 @@ var jadernak = {
 	ShowSubjects: function() //redraw subject menu, called when week changed, and whne some subject is clicked
 	{
 		//begin sections
-		var subjects_select='<ul class="nav nav-pills nav-stacked col-md-3">';
-		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-md-5">';
+		var subjects_select='<ul class="nav nav-pills nav-stacked col-xs-4">';
+		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-xs-8">';
 
 		//show clicable subject
-		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logo.png" style="height:50px"> </a></li>';
+		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logocerne.png" style="height:50px"> </a></li>';
 		//tab content:
 		subject_tab_content+='<div class="tab-pane active" id="tabid_index">';
 		subject_tab_content+='<h4>INDEX</h4>';
@@ -220,18 +220,18 @@ var jadernak = {
 					if(j==Subjects[i].req.length)
 					{
 						//show clicable subject
-						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"></a></li>';
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" class="img-responsive img-center"></a></li>';
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4>'+Subjects[i].name+'</h4>';
 						subject_tab_content+='<p>'+Subjects[i].description+'</p>';
-						subject_tab_content+='<button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')">Zkusit</button> ';
+						subject_tab_content+='<button type="button" class="btn btn-default navbar-btn btn-block" style="border: 1px solid black" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')">Zkusit</button> ';
 						subject_tab_content+='</div>';		
 					}
 					else
 					{
 						//show unclicable due unsatisfied requirements
-						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"></a></li>';
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" class="img-center" style="border-radius: 5px"></a></li>';
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4>'+Subjects[i].name+'</h4>';

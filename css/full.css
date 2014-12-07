@@ -278,16 +278,44 @@ margin-bottom:5px
       background-color: #000000;
       	font-weight: 600;
 }
-
+ /* Bubble text*/
 .bubble 
 {
 position: relative;
 width: 250px;
-height: 125px;
-padding: 0px;
+height: 120px;
+padding: 1px;
 background: #FFFFFF;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-border: #000000 solid 2px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+border-radius: 16px;
+border: #000 solid 3px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -15px;
+left: 90px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 17px 17px 0;
+border-color: #000 transparent;
+display: block;
+width: 0;
+z-index: 0;
+bottom: -20px;
+left: 88px;
 }
