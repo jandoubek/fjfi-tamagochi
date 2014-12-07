@@ -2,7 +2,7 @@
 var jadernak = {
 	Health:20,
 	Knowledge:0,
-	Sanity:30,
+	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
 	Week:1,
@@ -38,7 +38,7 @@ var jadernak = {
 		this.Sanity+=Activites[id].Sanity;
 
 		//update time info
-		this.Hours-=4;
+		this.Hours-=8;
 
 		this.Draw();
 
@@ -117,6 +117,8 @@ var jadernak = {
 			case 2: pokus2.update(number,action);
 				break;	
 			case 3: sixbeer.update(number,action);
+				break;	
+			case 4: first_beer.update(number,action);
 				break;					
 //================================================================================================
 		}

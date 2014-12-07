@@ -1,0 +1,52 @@
+===Alert HowTo===
+
+Alerty vytvářejí vlastní programovatelnou vrstvu do aplikace. 
+Každý alert představuje samostatný objekt a po každém kliknutí uživatele je zavlána jeho funkce update(number, action),
+kde number je technický parametr, který předá tato funkce zpět funkci jadernak.update(number, action).
+Parametr action "je typu string" popisuje akci kterou uživatel provedl jedná se o jednu z následujících možností:
+
+1) NAZEVAKTIVITY
+2) success_IDPREDMETU
+3) fail_IDPREDMETU
+
+Dle alert může reagovat na Akce, počítat vypitá piva, reagovat na úspěšnou zkoušku), nebo jen kontrolovat vnitřní parametry jaderňáka.
+V případě že Alert nic nechce zobrazit, zavolá pomocí SetTimeout funkci jadernak.update() s krátkým delay. (Ta pak zavolá další alert)
+Pokud chce Alert něco vykreslit, vykreslí to pomocí funkce jadernak.ShowAlert(message,number, action), ta sama přidá tlačítko OK.
+Pokud má Vykreslený Alert sám zmizet, zavolá ještě funkci SetTimeout jadernak.update(number,action). 
+Toto například není vhodné pro Alerty  se sdílením na FB.
+
+==Příklad==
+
+Tento Alert se zobrazí po prvním pivu.
+
+var firts_beer = {
+	done: 0,
+
+	update : function(number,action)
+		{
+			//alert(action);
+			if(this.done==0 && action==="Pívo")
+			{
+				this.done=1;
+				var message='<h1><center> Pívo</center></h1>';
+				message+="<h5>Zašel sis do hospody na jedno. Díky tomu se zlepšila tvá příčetnost a zdraví, ale klesli ti znalosti<h5>";
+				jadernak.ShowAlert(message,number, action);
+				setTimeout("jadernak.Update("+number+",'"+action+"')", 5000);	
+			}
+			else
+				setTimeout("jadernak.Update("+number+",'"+action+"')", 5);
+		}
+};
+
+
+Po sepsání Alertu je potřeba jej registrovat na dvou místech: 
+1) v souboru index.html v <head> naincludovat skript:
+
+	<script type="text/javascript" src="./js/first_beer.js"></script>
+
+2) v souboru js/jadernak.js ve funkci jadernak.update přidat do konstrukce switch volání funkce objekt.update:
+	
+	case 4: first_beer.update(number,action);
+		break;	
+
+A to je vše!
