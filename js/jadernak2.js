@@ -44,7 +44,7 @@ var jadernak = {
 
 		//render activity animation (between current state and new state), and show beground for activity
 		document.getElementById("jadernak_id").src="image/"+Activites[id].Animation[this.state][this.newstate];
-		document.body.style.backgroundImage="url('image/"+Activites[id].Background+"')";
+		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";
 	
 		//delay time of activity, than call update, which show normal jadernak
 		setTimeout("jadernak.Update(0,'"+Activites[id].Name+"')", Activites[id].AnimationTime);
@@ -107,7 +107,7 @@ var jadernak = {
 		this.CleanMessage();
 		this.CleanAlert();
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
-		document.body.style.backgroundImage="url('image/uvodni.JPG')";
+		document.getElementById("body_id").style.backgroundImage="url('image/uvodni1980.jpg')";
 
 		switch(number)
 		{
@@ -140,10 +140,10 @@ var jadernak = {
 //-----------------------------------------------------------------------------------------------------------------------
 	ShowAlert: function(message,number,action)
 	{
-		alert='<div id="alert_out_id" style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);">';
-		alert+="<center>"+message+"</center>";
-		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
-		alert+='</dev>';	
+		alert='<div  id="alert_out_id" style="position: fixed; top: 0%; left:0%; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5)"><div style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);border:2px solid black">';
+		alert+="<p style='margin-top:5%'><center>"+message+"</center></p>";
+		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" style="width:25%;margin-top:5%;border: 2px solid black" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
+		alert+='</div></div>';	
 		document.body.innerHTML +=alert;
 	},
 
@@ -193,7 +193,7 @@ var jadernak = {
 		subject_tab_content+='<div class="tab-pane active" id="tabid_index">';
 		subject_tab_content+='<h4>INDEX</h4>';
 		subject_tab_content+='<p>To je přehlad zapsaných předmětů</p>';
-	    subject_tab_content+='</div>';	
+	    	subject_tab_content+='</div>';	
 
 		var count=0;
 		var shown=0;
@@ -296,7 +296,7 @@ var jadernak = {
 
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].succes_animation;
-			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
+			document.getElementById("body_id").style.backgroundImage="url('image/"+Subjects[id].background+"')";
 			this.ShowMessage('<h4>'+Subjects[id].succes_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
@@ -316,7 +316,7 @@ var jadernak = {
 
 			//show animation, background, message, etc.
 			document.getElementById("jadernak_id").src="image/"+Subjects[id].fail_animation;
-			document.body.style.backgroundImage="url('image/"+Subjects[id].background+"')";
+			document.getElementById("body_id").style.backgroundImage="url('image/"+Subjects[id].background+"')";
 			this.ShowMessage('<h4>'+Subjects[id].fail_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
