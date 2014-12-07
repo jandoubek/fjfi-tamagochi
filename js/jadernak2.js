@@ -140,10 +140,10 @@ var jadernak = {
 //-----------------------------------------------------------------------------------------------------------------------
 	ShowAlert: function(message,number,action)
 	{
-		alert='<div id="alert_out_id" style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);">';
-		alert+="<center>"+message+"</center>";
-		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
-		alert+='</dev>';	
+		alert='<div  id="alert_out_id" style="position: fixed; top: 0%; left:0%; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5)"><div style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);border:2px solid black">';
+		alert+="<p style='margin-top:5%'><center>"+message+"</center></p>";
+		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" style="width:25%;margin-top:5%;border: 2px solid black" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
+		alert+='</div></div>';	
 		document.body.innerHTML +=alert;
 	},
 
