@@ -10,13 +10,13 @@ var Subjects = [
     "done":0,
     "sanity":10,
     "succes_message":"Můžeš nastoupit jako programátor do IBM",
-    "fail_message":"I cvičená opice programuje lépe než vy",
+    "fail_message":"Jakto že vám to zase nejde? A zkoušeli jste to vypnout a zapnout? Tak si radši přijďte příště, pane kolego...",
     "succes_animation":"jadro_1.png",
     "fail_animation":"jadro_0.png",
     "background":"pc.jpg",
     "animation_time":3000,
     "profphoto":"virius.jpg",
-    "description":"Jakto že vám to zase nejde? Hmm... A zkoušeli jste to vypnout a zapnout?"  
+    "description":"Jazyk java není dobrý pro implementaci softwaru pro řízení letového provozu, protože než java uklidí paměť, může být nepořádek na přistávací ploše."  
 },
 
 {
