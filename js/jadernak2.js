@@ -8,7 +8,9 @@ var jadernak = {
 	Week:1,
 	Hours:168,
 	Credits:0,
-	Timer:0,
+	Timer:-1,
+	number:0,
+	action:" ",
 
 //------------------------------------------------------------------------------------------------
 	init : function(){
@@ -24,6 +26,14 @@ var jadernak = {
 
 //------------------------------------------------------------------------------------------------	
 	onActivity: function(Name){
+
+		//cancel animation by click
+		if(this.Timer!=-1)
+		{
+			clearTimeout(this.Timer);
+			this.Timer=setTimeout("jadernak.Update()", 1);
+			return;
+		}
 
 		//find Activity index
 		for (var id=0; id<Activites.length; id++) {
@@ -47,7 +57,9 @@ var jadernak = {
 		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";
 	
 		//delay time of activity, than call update, which show normal jadernak
-		setTimeout("jadernak.Update(0,'"+Activites[id].Name+"')", Activites[id].AnimationTime);
+		this.action=Activites[id].Name;
+		this.number=0;
+		this.Timer=setTimeout("jadernak.Update()", Activites[id].AnimationTime);
 	
 	},
 
@@ -100,27 +112,30 @@ var jadernak = {
 	},
 
 //-------------------------------------------------------------------------------------------------------
-	Update:function(number,action)//function setting base image, called by onFunc by Timeout, end of every animated action, called itself
+	Update:function()//function setting base image, called by onFunc by Timeout, end of every animated action, called itself
 	{
-		number=number+1;
+		this.number=this.number+1;
 		this.state=this.newstate;
 		this.CleanMessage();
 		this.CleanAlert();
 		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
 		document.getElementById("body_id").style.backgroundImage="url('image/uvodni1980.jpg')";
 
-		switch(number)
+		switch(this.number)
 		{
 //======================ABSTRACT LAYER ENTRY POINT================================================
-			case 1: pokus1.update(number,action);
+			case 1: pokus1.update(this.action);
 				break;
-			case 2: pokus2.update(number,action);
+			case 2: pokus2.update(this.action);
 				break;	
-			case 3: sixbeer.update(number,action);
+			case 3: sixbeer.update(this.action);
 				break;	
-			case 4: first_beer.update(number,action);
+			case 4: first_beer.update(this.action);
 				break;					
 //================================================================================================
+			default: this.Timer=-1;
+				 this.action=" ";
+				 break;
 		}
 
 	},
@@ -132,32 +147,33 @@ var jadernak = {
 //-----------------------------------------------------------------------------------------------------------------------
 	CleanMessage: function(message)
 	{
+		this.Timer=-1;
 		var elem = document.getElementById("message_inner_id");
 		if(elem!=null)
 			elem.parentNode.removeChild(elem);
 	},
 
 //-----------------------------------------------------------------------------------------------------------------------
-	ShowAlert: function(message,number,action)
+	ShowAlert: function(message)
 	{
 		alert='<div  id="alert_out_id" style="position: fixed; top: 0%; left:0%; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5)"><div style="position: fixed; top: 25%; left:0%; width: 100%; height: 50%; background: rgba(255, 255, 255, 1.0);border:2px solid black">';
 		alert+="<p style='margin-top:5%'><center>"+message+"</center></p>";
-		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" style="width:25%;margin-top:5%;border: 2px solid black" onClick="jadernak.OnAlert(\''+number+'\',\''+action+'\')" >Ok</button></center>';		
+		alert+='<center> <button type="button" class="btn btn-default navbar-btn btn-block" style="width:25%;margin-top:5%;border: 2px solid black" onClick="jadernak.OnAlert()" >Ok</button></center>';		
 		alert+='</div></div>';	
 		document.body.innerHTML +=alert;
 	},
 
 //-----------------------------------------------------------------------------------------------------------------------
-	OnAlert: function(number,action)
+	OnAlert: function()
 	{
 		clearTimeout(this.Timer);
-		this.Update(number,action);
+		this.Update();
 	},
 
 //-----------------------------------------------------------------------------------------------------------------------
 	CleanAlert: function()
 	{
-		this.Timer=0;
+		this.Timer=-1;
 		var elem = document.getElementById("alert_out_id");
 		if(elem!=null)
 			elem.parentNode.removeChild(elem);
@@ -273,6 +289,15 @@ var jadernak = {
 //--------------------------------------------------------------------------------------------------------------------------
 	onSubject: function(Name)//callback function for button on subject (sitting exame buttons)
 	{
+
+		//cancel animation by click
+		if(this.Timer!=-1)
+		{
+			clearTimeout(this.Timer);
+			this.Timer=setTimeout("jadernak.Update()", 1);
+			return;
+		}
+
 		//find id of subject
 		for (var id=0; id<Subjects.length; id++) {
  			if(Subjects[id].name === Name) {
@@ -300,7 +325,9 @@ var jadernak = {
 			this.ShowMessage('<h4>'+Subjects[id].succes_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
-			setTimeout("jadernak.Update(0,'success_"+Subjects[id].id+"')", Subjects[id].animation_time);	
+			this.action="success_"+Subjects[id].id;
+			this.number=0;
+			this.Timer=setTimeout("jadernak.Update()", Subjects[id].animation_time);	
 					
 		}
 		else
@@ -320,7 +347,9 @@ var jadernak = {
 			this.ShowMessage('<h4>'+Subjects[id].fail_message+'</h4>');
 
 			//delay time of activity, than call update, which show normal jadernak
-			setTimeout("jadernak.Update(0,'failed_"+Subjects[id].id+"')", Subjects[id].animation_time);
+			this.action="failed_"+Subjects[id].id;
+			this.number=0;
+			this.Timer=setTimeout("jadernak.Update()", Subjects[id].animation_time);
 		}		
 
 		this.ShowSubjects();

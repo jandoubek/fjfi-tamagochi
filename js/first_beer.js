@@ -1,7 +1,7 @@
 var first_beer = {
 	done: 0,
 
-	update : function(number,action)
+	update : function(action)
 		{		
 			//alert(action);
 			if(this.done==0 && action==="Pívo")
@@ -9,10 +9,10 @@ var first_beer = {
 				this.done=1;
 				var message='<h1><center> Pívo</center></h1>';
 				message+="<h5>Zašel sis do hospody na jedno. Díky tomu se zlepšila tvá příčetnost a zdraví, ale klesli ti znalosti<h5>";
-				jadernak.ShowAlert(message,number, action);
-				setTimeout("jadernak.Update("+number+",'"+action+"')", 10000);	
+				jadernak.ShowAlert(message);
+				jadernak.Timer=setTimeout("jadernak.Update()", 10000);	
 			}
 			else
-				setTimeout("jadernak.Update("+number+",'"+action+"')", 5);
+				jadernak.Timer=setTimeout("jadernak.Update()", 1);
 		}
 };
