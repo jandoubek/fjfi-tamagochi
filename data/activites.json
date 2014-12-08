@@ -5,9 +5,9 @@ var Activites = [
     "Health": -2,
     "Knowledge":-10,
     "Sanity": 20,
-    "Animation": [["pivo_0_0.png", "pivo_0_1.png","pivo_0_2.png"],
-		  ["pivo_1_0.png", "pivo_1_1.png","pivo_1_2.png"],
-		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
+    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"]
 		 ],
     "AnimationTime":3000,
     "Background":"pivo.JPG",
@@ -21,9 +21,9 @@ var Activites = [
     "Health": 10,
     "Knowledge": 0,
     "Sanity": 2,
-    "Animation": [["spi.gif", "spi.gif","spi.gif"],
-		  ["spi.gif", "spi.gif","spi.gif"],
-		  ["spi.gif", "spi.gif","spi.gif"]
+    "Animation": [["spici.gif", "spici.gif","spici.gif"],
+		  ["spici.gif", "spici.gif","spici.gif"],
+		  ["spici.gif", "spici.gif","spici.gif"]
 		 ],
     "AnimationTime":3000,
     "Background":"spanek.JPG",
@@ -37,9 +37,9 @@ var Activites = [
     "Health": -10,
     "Knowledge": 20,
     "Sanity": -10,
-    "Animation": [["uceni.gif", "uceni.gif","uceni.gif"],
-		  ["uceni.gif", "uceni.gif","uceni.gif"],
-		  ["uceni.gif", "uceni.gif","uceni.gif"]
+    "Animation": [["ucici.gif", "ucici.gif","ucici.gif"],
+		  ["ucici.gif", "ucici.gif","ucici.gif"],
+		  ["ucici.gif", "ucici.gif","ucici.gif"]
 		 ],
     "AnimationTime":3000,
     "Background":"uceni.JPG",
