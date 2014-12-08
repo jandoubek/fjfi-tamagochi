@@ -51,7 +51,7 @@ var Subjects = [
     "done":0,
     "sanity":10,
     "succes_message":"OK",
-    "fail_message":"VEN!",
+    "fail_message":"Jestli někdo tu písemku napsal, tak z toho nic nevyplývá. Ale jestli ji někdo nenapsal, tak z toho už něco vyplývá!",
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
@@ -71,7 +71,7 @@ var Subjects = [
     "done":0,
     "sanity":10,
     "succes_message":"OK",
-    "fail_message":"VEN!",
+    "fail_message":"Jestli někdo tu písemku napsal, tak z toho nic nevyplývá. Ale jestli ji někdo nenapsal, tak z toho už něco vyplývá!",
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
@@ -97,7 +97,7 @@ var Subjects = [
     "background":"",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":"Jestli někdo tu písemku napsal, tak z toho nic nevyplývá. Ale jestli ji někdo nenapsal, tak z toho už něco vyplývá!"           	
+    "description":"V životě člověk zažije dva šoky. První - to když se narodí. To musí být strašný šok. A druhý - když dělá na FJFI poprvé zkoušku z matematiky."           	
 },
 
 {
@@ -111,7 +111,7 @@ var Subjects = [
     "done":0,
     "sanity":10,
     "succes_message":"OK",
-    "fail_message":"VEN!",
+    "fail_message":"Jestli někdo tu písemku napsal, tak z toho nic nevyplývá. Ale jestli ji někdo nenapsal, tak z toho už něco vyplývá!",
     "succes_animation":"jadro_1.png",
     "failed_animation":"jadro_1.png",
     "background":"",
