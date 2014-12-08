@@ -207,7 +207,7 @@ var jadernak = {
 	{
 		//begin sections
 		var subjects_select='<ul class="nav nav-pills nav-stacked col-xs-4">';
-		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-xs-6 col-xs-offset-1">';
+		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-xs-7">';
 
 		//show clicable subject
 		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logocerne.png" style="height:50px;margin-right:auto;width:100%"> </a></li>';
