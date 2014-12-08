@@ -88,9 +88,9 @@ var jadernak = {
 			this.Knowledge=0;
 
 		//find new state of jadernak
-		if(this.Sanity+this.Health<60)
+		if(this.Sanity+this.Health<40)
 			this.newstate=0;//vycerpaný
-		if(this.Sanity+this.Health>60)
+		if(this.Sanity+this.Health>40)
 			this.newstate=1;//normalní
 		if(this.Sanity+this.Health>140)
 			this.newstate=2;//stastný
@@ -124,13 +124,11 @@ var jadernak = {
 		switch(this.number)
 		{
 //======================ABSTRACT LAYER ENTRY POINT================================================
-			case 1: pokus1.update(this.action);
-				break;
-			case 2: pokus2.update(this.action);
+			case 1: sprt.update(this.action);
 				break;	
-			case 3: sixbeer.update(this.action);
+			case 2: sixbeer.update(this.action);
 				break;	
-			case 4: first_beer.update(this.action);
+			case 3: first_beer.update(this.action);
 				break;					
 //================================================================================================
 			default: this.Timer=-1;
