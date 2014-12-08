@@ -1,7 +1,7 @@
 var Subjects = [
 {
     "id": "ZPRO",
-    "name": "Zaklady programovani",
+    "name": "Základy programování",
     "know": 40,
     "credits": 4,
     "week_start": 1,
@@ -16,7 +16,7 @@ var Subjects = [
     "background":"pc.jpg",
     "animation_time":3000,
     "profphoto":"virius.jpg",
-    "description":"Tady se naučítě kódit jak bozi..."  
+    "description":"Jakto že vám to zase nejde? Hmm... A zkoušeli jste to vypnout a zapnout?"  
 },
 
 {
