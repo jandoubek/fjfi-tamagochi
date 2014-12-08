@@ -21,9 +21,9 @@ var Activites = [
     "Health": 10,
     "Knowledge": 0,
     "Sanity": 2,
-    "Animation": [["spanek.png", "spanek.png","spanek.png"],
-		  ["spanek.png", "spanek.png","spanek.png"],
-		  ["spanek.png", "spanek.png","spanek.png"]
+    "Animation": [["spi.gif", "spi.gif","spi.gif"],
+		  ["spi.gif", "spi.gif","spi.gif"],
+		  ["spi.gif", "spi.gif","spi.gif"]
 		 ],
     "AnimationTime":3000,
     "Background":"spanek.JPG",
@@ -37,9 +37,9 @@ var Activites = [
     "Health": -10,
     "Knowledge": 20,
     "Sanity": -10,
-    "Animation": [["uceni.png", "uceni.png","uceni.png"],
-		  ["uceni.png", "uceni.png","uceni.png"],
-		  ["uceni.png", "uceni.png","uceni.png"]
+    "Animation": [["uceni.gif", "uceni.gif","uceni.gif"],
+		  ["uceni.gif", "uceni.gif","uceni.gif"],
+		  ["uceni.gif", "uceni.gif","uceni.gif"]
 		 ],
     "AnimationTime":3000,
     "Background":"uceni.JPG",
