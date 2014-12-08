@@ -57,7 +57,7 @@ var Subjects = [
     "background":"",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":"První zápočet z Analýzy: Středoškolská matematika a limity. Pozor na nepřítele a jeho epsilony"       
+    "description":"No když víte, že jedna a jedna jsou dvě, tak byste také měli vědět i to, že komplexně sdružené kořeny mají polynomy s reálnými koeficienty!"       
 },
 
 {
@@ -77,7 +77,7 @@ var Subjects = [
     "background":"",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":"Druhý zápočet z Analýzy: Derivace a Limity. Zde můžeš použít větu toho, jehož jméno se nesmí vysovovat. Ale musíš jí na druhé straně písemky dokázat..."            
+    "description":"Pracovaly na tom generace matematiků. A sami vidíte podle toho, že se to nějak jmenuje, že to asi nebude žádná sranda."            
 },
 
 {
@@ -97,7 +97,7 @@ var Subjects = [
     "background":"",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":"Tady už jde o krk. Nepřítel je pozorný a vždy přinese horší epsilon než si dokážeš představit."           	
+    "description":"Jestli někdo tu písemku napsal, tak z toho nic nevyplývá. Ale jestli ji někdo nenapsal, tak z toho už něco vyplývá!"           	
 },
 
 {
@@ -117,7 +117,7 @@ var Subjects = [
     "background":"",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":"Jestli tohle neuděláš, uteč na FEL, jinak se budeš dalších několik let jen trápit"           
+    "description":"Když mi nepřítel předhodí nějaké ε a já mu vrátím špatné δ, co nepřítel udělá? Vysměje se mi. Respektive, vyhodí mě od zkoušky."           
 }
 
 ];
