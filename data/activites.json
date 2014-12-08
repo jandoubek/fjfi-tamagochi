@@ -33,7 +33,7 @@ var Activites = [
 },
 
 {
-    "Name": "Učeni",
+    "Name": "Učení",
     "Health": -10,
     "Knowledge": 20,
     "Sanity": -10,

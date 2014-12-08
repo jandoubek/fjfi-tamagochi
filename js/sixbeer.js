@@ -13,8 +13,11 @@ var sixbeer = {
 
 			if(this.count>=6)
 			{
-				jadernak.ShowAlert("<h1><center> OPILČE! </center></h1>");
-				jadernak.Timer=setTimeout("jadernak.Update()", 5000);	
+				jadernak.ShowMessage("<h2><center> OPILČE! </center></h2>");
+				jadernak.Health=0;
+				jadernak.Knowledge=0;
+				document.getElementById("jadernak_id").src="image/Opity1.png";
+				jadernak.Timer=setTimeout("jadernak.Update()", 10000);	
 			}
 			else
 				jadernak.Timer=setTimeout("jadernak.Update()", 1);

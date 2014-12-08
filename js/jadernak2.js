@@ -5,7 +5,7 @@ var jadernak = {
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:1,
+	Week:5,
 	Hours:168,
 	Credits:0,
 	Timer:-1,
@@ -88,9 +88,9 @@ var jadernak = {
 			this.Knowledge=0;
 
 		//find new state of jadernak
-		if(this.Sanity+this.Health<40)
+		if(this.Sanity+this.Health<50)
 			this.newstate=0;//vycerpaný
-		if(this.Sanity+this.Health>40)
+		if(this.Sanity+this.Health>50)
 			this.newstate=1;//normalní
 		if(this.Sanity+this.Health>140)
 			this.newstate=2;//stastný
@@ -129,7 +129,13 @@ var jadernak = {
 			case 2: sixbeer.update(this.action);
 				break;	
 			case 3: first_beer.update(this.action);
-				break;					
+				break;	
+			case 4: first_sleep.update(this.action);
+				break;	
+			case 5: first_learn.update(this.action);
+				break;		
+			case 6: first_deprecated.update(this.action);
+				break;			
 //================================================================================================
 			default: this.Timer=-1;
 				 this.action=" ";
