@@ -1,13 +1,13 @@
 
 var jadernak = {
 	Health:20,
-	Knowledge:0,
+	Knowledge:60,
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
 	Week:5,
 	Hours:168,
-	Credits:0,
+	Credits:29,
 	Timer:-1,
 	number:0,
 	action:" ",
@@ -135,6 +135,8 @@ var jadernak = {
 			case 5: first_learn.update(this.action);
 				break;		
 			case 6: first_deprecated.update(this.action);
+				break;	
+			case 7: tricetkr.update(this.action);
 				break;			
 //================================================================================================
 			default: this.Timer=-1;
