@@ -1,13 +1,13 @@
 
 var jadernak = {
 	Health:20,
-	Knowledge:60,
+	Knowledge:0,
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:5,
+	Week:1,
 	Hours:168,
-	Credits:29,
+	Credits:0,
 	Timer:-1,
 	number:0,
 	action:" ",
