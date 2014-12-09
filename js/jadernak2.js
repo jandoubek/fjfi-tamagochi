@@ -9,6 +9,7 @@ var jadernak = {
 	Hours:168,
 	Credits:0,
 	Timer:-1,
+	CleanBackgroundTimer: -1,
 	number:0,
 	action:" ",
 
@@ -26,6 +27,13 @@ var jadernak = {
 
 //------------------------------------------------------------------------------------------------	
 	onActivity: function(Name){
+
+		//cance background clean
+		if(this.CleanBackgroundTimer!=-1)
+		{
+			clearTimeout(this.CleanBackgroundTimer);
+			this.CleanBackgroundTimer=-1;
+		}
 
 		//cancel animation by click
 		if(this.Timer!=-1)
@@ -118,8 +126,6 @@ var jadernak = {
 		this.state=this.newstate;
 		this.CleanMessage();
 		this.CleanAlert();
-		document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
-		document.getElementById("body_id").style.backgroundImage="url('image/uvodni1980.jpg')";
 
 		switch(this.number)
 		{
@@ -139,11 +145,20 @@ var jadernak = {
 			case 7: tricetkr.update(this.action);
 				break;			
 //================================================================================================
-			default: this.Timer=-1;
+			default: 
+				 document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
+				 this.CleanBackgroundTimer=setTimeout("jadernak.CleanBackground()", 3000);
+				 this.Timer=-1;
 				 this.action=" ";
 				 break;
 		}
 
+	},
+//-----------------------------------------------------------------------------------------------------------------------
+	CleanBackground: function()
+	{
+		this.CleanBackgroundTimer=-1;
+		document.getElementById("body_id").style.backgroundImage="url('image/uvodni1980.jpg')";
 	},
 //-----------------------------------------------------------------------------------------------------------------------
 	ShowMessage: function(message)
@@ -295,6 +310,13 @@ var jadernak = {
 //--------------------------------------------------------------------------------------------------------------------------
 	onSubject: function(Name)//callback function for button on subject (sitting exame buttons)
 	{
+
+		//cance background clean
+		if(this.CleanBackgroundTimer!=-1)
+		{
+			clearTimeout(this.CleanBackgroundTimer);
+			this.CleanBackgroundTimer=-1;
+		}
 
 		//cancel animation by click
 		if(this.Timer!=-1)
