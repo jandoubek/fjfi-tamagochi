@@ -54,7 +54,7 @@ var jadernak = {
 
 		//render activity animation (between current state and new state), and show beground for activity
 		document.getElementById("jadernak_id").src="image/"+Activites[id].Animation[this.state][this.newstate];
-		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";
+		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";a
 	
 		//delay time of activity, than call update, which show normal jadernak
 		this.action=Activites[id].Name;
@@ -214,7 +214,7 @@ var jadernak = {
 		//tab content:
 		subject_tab_content+='<div class="tab-pane active" id="tabid_index">';
 		subject_tab_content+='<h4 style="margin-top:20%">INDEX</h4>';
-		subject_tab_content+='<p style="margin-top:20%">To je přehlad zapsaných předmětů</p>';
+		subject_tab_content+='<p style="margin-top:20%">To je přehled zapsaných předmětů</p>';
 	    	subject_tab_content+='</div>';	
 
 		var count=0;
