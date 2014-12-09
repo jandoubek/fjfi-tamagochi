@@ -8,8 +8,9 @@ var jadernak = {
 	Week:1,
 	Hours:168,
 	Credits:0,
+	CleanBackgroundTimeout:5000,
 	Timer:-1,
-	CleanBackgroundTimer: -1,
+	CleanBackgroundTimer: -1,	
 	number:0,
 	action:" ",
 
@@ -147,7 +148,7 @@ var jadernak = {
 //================================================================================================
 			default: 
 				 document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
-				 this.CleanBackgroundTimer=setTimeout("jadernak.CleanBackground()", 3000);
+				 this.CleanBackgroundTimer=setTimeout("jadernak.CleanBackground()", this.CleanBackgroundTimeout);
 				 this.Timer=-1;
 				 this.action=" ";
 				 break;
