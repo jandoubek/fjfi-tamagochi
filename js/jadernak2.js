@@ -54,7 +54,7 @@ var jadernak = {
 
 		//render activity animation (between current state and new state), and show beground for activity
 		document.getElementById("jadernak_id").src="image/"+Activites[id].Animation[this.state][this.newstate];
-		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";a
+		document.getElementById("body_id").style.backgroundImage="url('image/"+Activites[id].Background+"')";
 	
 		//delay time of activity, than call update, which show normal jadernak
 		this.action=Activites[id].Name;
