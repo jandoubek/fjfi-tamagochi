@@ -36,7 +36,7 @@ var Subjects = [
     "background":"pc.jpg",
     "animation_time":3000,
     "profphoto":"doubek.jpg",
-    "description":"Tady se naučíte kódit v týmu pod vedením zkušeného SCRUMMA"  
+    "description":"'Keep calm and listen to the scrum master.'"  
 },
 
 
