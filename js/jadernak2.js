@@ -5,7 +5,7 @@ var jadernak = {
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:2,
+	Week:1,
 	Hours:168,
 	Credits:0,
 	CleanBackgroundTimeout:5000,
@@ -147,7 +147,13 @@ var jadernak = {
 			case 6: first_deprecated.update(this.action);
 				break;	
 			case 7: tricetkr.update(this.action);
-				break;			
+				break;	
+			case 8: mam.update(this.action);
+				break;	
+			case 9:  bazantrikulace.update(this.action);
+				break;	
+			case 10: strahovopen.update(this.action);
+				break;	
 //================================================================================================
 			default: 
 				 document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";

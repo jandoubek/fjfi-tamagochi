@@ -3,7 +3,7 @@ var Activites = [
 {
     "Name": "Pívo",
     "Health": -2,
-    "Knowledge":-10,
+    "Knowledge":-2,
     "Sanity": 20,
     "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"],
@@ -35,7 +35,7 @@ var Activites = [
 {
     "Name": "Učení",
     "Health": -10,
-    "Knowledge": 20,
+    "Knowledge": 5,
     "Sanity": -10,
     "Animation": [["ucici.gif", "ucici.gif","ucici.gif"],
 		  ["ucici.gif", "ucici.gif","ucici.gif"],
@@ -50,34 +50,34 @@ var Activites = [
 
 {
     "Name": "Bažantrikulace",
-    "Health": 20,
-    "Knowledge":0,
-    "Sanity": 20,
+    "Health": 30,
+    "Knowledge":5,
+    "Sanity": 30,
     "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pivo.JPG",
+    "Background":"bazantrikulace.jpg",
     "week_start": 10,
     "week_end": 10,
-    "minstate":0
+    "minstate":1
 },
 
 {
-    "Name": "Strahov Open",
+    "Name": "Strahov Open Air",
     "Health": -20,
-    "Knowledge":0,
+    "Knowledge":-2,
     "Sanity": 20,
     "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pivo.JPG",
-    "week_start": 2,
-    "week_end": 2,
-    "minstate":0
+    "Background":"strahov.jpg",
+    "week_start": 1,
+    "week_end": 1,
+    "minstate":1
 },
 
 ];

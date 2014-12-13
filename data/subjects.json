@@ -204,21 +204,21 @@ var Subjects = [
 {
     "id": "DEF",
     "name": "Dějiny fyziky",
-    "know": 10,
+    "know": 5,
     "credits": 2,
     "week_start": 2,
     "week_end": 14,
     "req": [],
     "done":0,
     "sanity":10,
-    "succes_message":"To bylo pěkné, opravdu! Vy se mi líbíte! Víte co? Já si vás v tom prváku nechám!",
+    "succes_message":"Toto je předmět za účast, či za podpisy!",
     "fail_message":"KO",
     "succes_animation":"jadro_2.png",
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"jex.jpg",
-    "description":" Description of DEF"   
+    "description":"Kdo chce hlučet a rušit, tady je prezenčka, podepsat a vypadnout.... "   
 },
 
 {
@@ -238,7 +238,7 @@ var Subjects = [
     "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"pytlicek.jpg",
-    "description":" Description of Přípravný Týden"   
+    "description":" Máte na to: 3 minuty."   
 },
 
 {
@@ -278,7 +278,7 @@ var Subjects = [
     "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"bren.jpg",
-    "description":" Description of MECH_ZK" 
+    "description":"Zde musíte vysvětlit tenzor momentu setrvačnosti, nebo rotočit káču" 
 },
 
 {
@@ -298,7 +298,7 @@ var Subjects = [
     "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"posta.jpg",
-    "description":" Description of DEF"       
+    "description":" Matematické Minimum pro ty nechápavé. Dříve ZLO, od slova Zlomky. Tradičně, v pátek odpoledne!"       
 }
 
 ];
