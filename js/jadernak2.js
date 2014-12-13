@@ -218,12 +218,11 @@ var jadernak = {
 			if(Activites[i].week_start<=this.Week && this.Week <=Activites[i].week_end )
 				if(Activites[i].minstate<=this.newstate)
 				{
-          
-				document.getElementById("activites_id").innerHTML+='<button type="button" class="btn btn-primary btn-outline" style="font-size: 1vw;" onClick="jadernak.onActivity(\''+Activites[i].Name+'\')" >'+Activites[i].Name+'</button>';
+					document.getElementById("activites_id").innerHTML+='<div class="btn-group" role="group"><button type="button" class="btn btn-primary  btn-outline" style="border: 1px solid black;" onClick="jadernak.onActivity(\''+Activites[i].Name+'\')" >'+Activites[i].Name+'</button></div>';
 				}
 				else
 				{
-					document.getElementById("activites_id").innerHTML+='<button type="button" class="btn btn-primary btn-outline" style="font-size: 1vw;" disabled="disabled" >'+Activites[i].Name+'</button>';
+					document.getElementById("activites_id").innerHTML+='<div class="btn-group" role="group"><button type="button" class="btn btn-default " style="border: 1px solid black;" disabled="disabled" >'+Activites[i].Name+'</button></div>';
 				}
 			};
 	},
