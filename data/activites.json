@@ -4,7 +4,7 @@ var Activites = [
     "Name": "Pívo",
     "Health": -2,
     "Knowledge":-2,
-    "Sanity": 20,
+    "Sanity": 5,
     "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"],
 		  ["pijici.gif", "pijici.gif","pijici.gif"]
