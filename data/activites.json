@@ -46,7 +46,39 @@ var Activites = [
     "week_start": 1,
     "week_end": 18,
     "minstate":1
-}
+},
+
+{
+    "Name": "Bažantrikulace",
+    "Health": 20,
+    "Knowledge":0,
+    "Sanity": 20,
+    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"]
+		 ],
+    "AnimationTime":3000,
+    "Background":"pivo.JPG",
+    "week_start": 10,
+    "week_end": 10,
+    "minstate":0
+},
+
+{
+    "Name": "Strahov Open",
+    "Health": -20,
+    "Knowledge":0,
+    "Sanity": 20,
+    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"]
+		 ],
+    "AnimationTime":3000,
+    "Background":"pivo.JPG",
+    "week_start": 2,
+    "week_end": 2,
+    "minstate":0
+},
 
 ];
 

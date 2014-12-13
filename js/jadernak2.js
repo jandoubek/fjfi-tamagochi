@@ -5,7 +5,7 @@ var jadernak = {
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:12,
+	Week:2,
 	Hours:168,
 	Credits:0,
 	CleanBackgroundTimeout:5000,

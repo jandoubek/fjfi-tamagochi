@@ -65,8 +65,8 @@ var Subjects = [
     "name": "Matematická analýza 1 zapocet 2",
     "know": 20,
     "credits": 0,
-    "week_start": 12,
-    "week_end": 13,
+    "week_start": 11,
+    "week_end": 11,
     "req":[],
     "done":0,
     "sanity":10,
@@ -85,7 +85,7 @@ var Subjects = [
     "name": "Matematická analýza 1",
     "know": 0,
     "credits": 4,
-    "week_start": 13,
+    "week_start": 12,
     "week_end": 13,
     "req": ["MA1_Z1", "MA1_Z2"],
     "done":0,
@@ -137,7 +137,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":" Description of LA1_Z1"             
 },
 
@@ -157,7 +157,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":" Description of LA1_Z2"     
 },
 
@@ -177,7 +177,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":" Description of LA1" 
 },
 
@@ -197,7 +197,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":" Description of LA1_ZK"
 },
 
@@ -206,7 +206,7 @@ var Subjects = [
     "name": "Dějiny fyziky",
     "know": 10,
     "credits": 2,
-    "week_start": 12,
+    "week_start": 2,
     "week_end": 14,
     "req": [],
     "done":0,
@@ -217,7 +217,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"jex.jpg",
     "description":" Description of DEF"   
 },
 
@@ -237,7 +237,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"pytlicek.jpg",
     "description":" Description of Přípravný Týden"   
 },
 
@@ -257,7 +257,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"bren.jpg",
     "description":" Description of MECH"     
 },
 
@@ -277,7 +277,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"bren.jpg",
     "description":" Description of MECH_ZK" 
 },
 
@@ -286,10 +286,10 @@ var Subjects = [
     "name": "Matematicke minimum",
     "know": 15,
     "credits": 2,
-    "week_start": 12,
+    "week_start": 13,
     "week_end": 13,
     "req": [],
-    "done":0,
+    "done":1,
     "sanity":10,
     "succes_message":"OK",
     "fail_message":"KO",
