@@ -5,7 +5,7 @@ var jadernak = {
 	Sanity:20,
 	state:1, //0-vycerpaný, 1-normální, 2-stastný
 	newstate:1,
-	Week:5,
+	Week:12,
 	Hours:168,
 	Credits:0,
 	CleanBackgroundTimeout:5000,
@@ -14,8 +14,11 @@ var jadernak = {
 	number:0,
 	action:" ",
 
+
 //------------------------------------------------------------------------------------------------
 	init : function(){
+
+		Subjects.sort(function(a, b){return a.week_start-b.week_start})
 
 		this.ShowActivites();
 
@@ -235,7 +238,7 @@ var jadernak = {
 
 		var count=0;
 		var shown=0;
-		for (var i=0; i<Subjects.length; i++) 
+		for (var i=0; i<Subjects.length && count<6; i++) 
 		{
 			shown=0;
 			if(Subjects[i].done==0)
@@ -283,7 +286,7 @@ var jadernak = {
 					shown=1;	
 				}
 
-				if(count<5 && shown==0 && this.Week <=Subjects[i].week_end)
+				if(count<6 && shown==0 && this.Week <=Subjects[i].week_end)
 				{
 					//show unclicable due no time for subject
 					subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" style="margin-right:auto;width:100%;border:1px solid white;border-radius: 5px"></a></li>';

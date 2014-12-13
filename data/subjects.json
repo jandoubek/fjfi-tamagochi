@@ -13,7 +13,7 @@ var Subjects = [
     "fail_message":"Tak si radši přijďte příště, pane kolego...",
     "succes_animation":"jadro_2.png",
     "fail_animation":"jadro_0.png",
-    "background":"pc.jpg",
+    "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"virius.jpg",
     "description":"Jazyk java není dobrý pro implementaci softwaru pro řízení letového provozu, protože než java uklidí paměť, může být nepořádek na přistávací ploše."  
@@ -33,7 +33,7 @@ var Subjects = [
     "fail_message":"Tak si radši přijďte příště, pane kolego...",
     "succes_animation":"jadro_2.png",
     "fail_animation":"jadro_0.png",
-    "background":"pc.jpg",
+    "background":"uvodni1980.jpg",
     "animation_time":3000,
     "profphoto":"doubek.jpg",
     "description":"Keep calm and listen to the scrum master."  

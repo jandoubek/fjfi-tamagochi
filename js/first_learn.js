@@ -7,10 +7,10 @@ var first_learn = {
 			if(this.done==0 && action==="Učení")
 			{
 				this.done=1;
-				var message='<h1><center> Učení</center></h1>';
+				var message='<h3><center> Učení</center></h3>';
 				message+="<h5>Je to neuvěřitelné, ale učíš se. Sice Ti přibývají znalosti závratným tempem, ale má to neblahý vliv na tvé zdraví.<h5>";
-				jadernak.ShowAlert(message);
-				jadernak.Timer=setTimeout("jadernak.Update()", 10000);	
+				jadernak.ShowMessage(message);
+				jadernak.Timer=setTimeout("jadernak.Update()", 7000);	
 			}
 			else
 				jadernak.Timer=setTimeout("jadernak.Update()", 1);
