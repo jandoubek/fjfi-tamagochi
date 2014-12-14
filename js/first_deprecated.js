@@ -10,8 +10,8 @@ var first_deprecated = {
 			if(this.unaveny==0 && jadernak.state==0)
 			{
 				this.unaveny=1;
-				var message='<h3><center> Jsi unavený</center></h3>';
-				message+="<h5>Tvůj Jaderňák je příliš unavený a smutný. V tomto stavu se není schopen učit!<h5>";
+				var message='<h3><center> Jsem unavený</center></h3>';
+				message+="<h5>teď se přece nemůžu nemůžu učit!<h5>";
 				jadernak.ShowMessage(message);
 				jadernak.Timer=setTimeout("jadernak.Update()", 7000);	
 			}

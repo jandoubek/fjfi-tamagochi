@@ -8,7 +8,7 @@ var first_sleep = {
 			{
 				this.done=1;
 				var message='<h3><center> Spánek</center></h3>';
-				message+="<h5>Unavený jsi padl na strahově do postele. Spánek Ti dodává zdraví!<h5>";
+				message+="<h5>Spánek mi dodává zdraví!<h5>";
 				jadernak.ShowMessage(message);
 				jadernak.Timer=setTimeout("jadernak.Update()", 7000);	
 			}

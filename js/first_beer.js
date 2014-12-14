@@ -8,7 +8,7 @@ var first_beer = {
 			{
 				this.done=1;
 				var message='<h3><center> Pívo</center></h3>';
-				message+="<h5>Zašel sis do hospody na jedno. Díky tomu se zlepšila tvá příčetnost a zdraví, ale klesli ti znalosti<h5>";
+				message+="<h5>Díky za pivo, hned se cítím klidnější!<h5>";
 				jadernak.ShowMessage(message);
 				jadernak.Timer=setTimeout("jadernak.Update()", 7000);	
 			}

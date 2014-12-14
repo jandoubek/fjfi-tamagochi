@@ -8,7 +8,7 @@ var first_learn = {
 			{
 				this.done=1;
 				var message='<h3><center> Učení</center></h3>';
-				message+="<h5>Je to neuvěřitelné, ale učíš se. Sice Ti přibývají znalosti závratným tempem, ale má to neblahý vliv na tvé zdraví.<h5>";
+				message+="<h5>Je to neuvěřitelné, ale učím se. Sice mi přibývají znalosti závratným tempem, ale má to neblahý vliv na mé zdraví.<h5>";
 				jadernak.ShowMessage(message);
 				jadernak.Timer=setTimeout("jadernak.Update()", 7000);	
 			}
