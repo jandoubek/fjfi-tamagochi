@@ -8,7 +8,7 @@ var jadernak = {
 	Week:1,
 	Hours:168,
 	Credits:0,
-	CleanBackgroundTimeout:5000,
+	CleanBackgroundTimeout:10000,
 	Timer:-1,
 	CleanBackgroundTimer: -1,	
 	number:0,
@@ -273,7 +273,9 @@ var jadernak = {
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
-						subject_tab_content+='<p style="margin-top:20%">'+Subjects[i].description+'</p>';
+						subject_tab_content+='<p style="margin-top:10%"><b>Znalosti: </b><i>'+Subjects[i].know+'</i></p>';
+						subject_tab_content+='<p style="margin-top:5%"><b>Kredity: </b><i>'+Subjects[i].credits+'</i></p>';
+						subject_tab_content+='<p style="margin-top:10%">'+Subjects[i].description+'</p>';
 						subject_tab_content+='<button type="button" class="btn btn-default navbar-btn btn-block" style="margin-top:20%;border: 1px solid black" onClick="jadernak.onSubject(\''+Subjects[i].name+'\')">Zkusit</button> ';
 						subject_tab_content+='</div>';		
 					}
@@ -284,6 +286,8 @@ var jadernak = {
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
+						subject_tab_content+='<p style="margin-top:10%"><b>Znalosti: </b><i>'+Subjects[i].know+'</i></p>';
+						subject_tab_content+='<p style="margin-top:5%"><b>Kredity: </b><i>'+Subjects[i].credits+'</i></p>';
 						subject_tab_content+='<p style="margin-top:20%"><i>Tento předmět nemůžete absolvovat, protože jeho požadavky nejsou splněny.</i></p>';
 						subject_tab_content+='</div>';		
 						
@@ -299,6 +303,8 @@ var jadernak = {
 					//tab content:
 					subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 					subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
+						subject_tab_content+='<p style="margin-top:10%"><b>Znalosti: </b><i>'+Subjects[i].know+'</i></p>';
+						subject_tab_content+='<p style="margin-top:5%"><b>Kredity: </b><i>'+Subjects[i].credits+'</i></p>';
 					subject_tab_content+='<p style="margin-top:20%"><i>Tento předmět je k dispozici od '+Subjects[i].week_start+' týdne.</i></p>';
 					subject_tab_content+='</div>';		
 									
@@ -344,7 +350,7 @@ var jadernak = {
 		}
 
 		//check if subject can be done
-		if(Subjects[id].know<this.Knowledge)
+		if(Subjects[id].know<=this.Knowledge)
 		{
 			//succes!
 			//update inner values
