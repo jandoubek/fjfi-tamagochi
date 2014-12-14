@@ -137,7 +137,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":"Hodnost matice je jednoduše počet jejích LN sloupců, ale u zkoušky mi to takhle nikam nepište, to je jenom tak... mezi čtyřma očima!"             
 },
 
@@ -157,7 +157,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":"A tohle chci, aby jste si s sebou vzali do života... nebo alespoň do zkoušky... nebo alespoň do konce cvičení!"     
 },
 
@@ -177,7 +177,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":"Moc se tomu nesmějte; až budete renomovaný matematik, tak si zavádějte vlastní pojmy, do té doby jsou pro vás pouze sloupce hlavní, ne nějaké nezávislé." 
 },
 
@@ -197,7 +197,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"balkova.jpg",
     "description":"Nechval dne před algebrou!"
 },
 
@@ -217,7 +217,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"jex.jpg",
     "description":"Ten Laplaceův determinismus by vlastně znamenal, že ani já, ani vy nemůžeme za to, že budete vyhozeni od zkoušky - je to dáno již počátečními podmínkami vzniku vesmíru."   
 },
 
@@ -237,7 +237,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"jex.jpg",
     "description":"Vítejte na jaderce! Není se čeho bát. Nic horšího Vás už v životě nepotká. "   
 },
 
@@ -257,7 +257,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"bren.jpg",
     "description":"Integrací ve čtyřech rozměrech zjistíte, že ve vícerozměrném vesmíru nikdy nebude výhodné kupovat si melouny, protože se většina jejich hmoty soustředí ve slupce."     
 },
 
@@ -277,7 +277,7 @@ var Subjects = [
     "fail_animation":"jadro_0.png",
     "background":"uvodni1980.jpg",
     "animation_time":3000,
-    "profphoto":"smile.jpg",
+    "profphoto":"bren.jpg",
     "description":"Naučit se divergence a rotace je to samé, jako se naučit malou násobilku." 
 },
 
