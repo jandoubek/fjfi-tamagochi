@@ -48,37 +48,5 @@ var Activites = [
     "minstate":1
 },
 
-{
-    "Name": "Bažantrikulace",
-    "Health": 30,
-    "Knowledge":5,
-    "Sanity": 30,
-    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
-		  ["pijici.gif", "pijici.gif","pijici.gif"],
-		  ["pijici.gif", "pijici.gif","pijici.gif"]
-		 ],
-    "AnimationTime":3000,
-    "Background":"bazantrikulace.jpg",
-    "week_start": 10,
-    "week_end": 10,
-    "minstate":1
-},
-
-{
-    "Name": "Strahov Open Air",
-    "Health": -20,
-    "Knowledge":-2,
-    "Sanity": 20,
-    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
-		  ["pijici.gif", "pijici.gif","pijici.gif"],
-		  ["pijici.gif", "pijici.gif","pijici.gif"]
-		 ],
-    "AnimationTime":3000,
-    "Background":"strahov.jpg",
-    "week_start": 1,
-    "week_end": 1,
-    "minstate":1
-},
-
 ];
 

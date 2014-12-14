@@ -150,10 +150,6 @@ var jadernak = {
 				break;	
 			case 8: mam.update(this.action);
 				break;	
-			case 9:  bazantrikulace.update(this.action);
-				break;	
-			case 10: strahovopen.update(this.action);
-				break;	
 //================================================================================================
 			default: 
 				 document.getElementById("jadernak_id").src="image/jadro_"+this.state+".png";
