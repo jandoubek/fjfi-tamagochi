@@ -2,15 +2,15 @@ var Activites = [
 
 {
     "Name": "Pívo",
-    "Health": 1,
-    "Knowledge":-10,
-    "Sanity": 20,
-    "Animation": [["pivo_0_0.png", "pivo_0_1.png","pivo_0_2.png"],
-		  ["pivo_1_0.png", "pivo_1_1.png","pivo_1_2.png"],
-		  ["pivo_2_0.png", "pivo_2_1.png","pivo_2_2.png"]
+    "Health": -2,
+    "Knowledge":-2,
+    "Sanity": 5,
+    "Animation": [["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"],
+		  ["pijici.gif", "pijici.gif","pijici.gif"]
 		 ],
     "AnimationTime":3000,
-    "Background":"oktoberfest3.jpg",
+    "Background":"pivo.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":0
@@ -21,32 +21,32 @@ var Activites = [
     "Health": 10,
     "Knowledge": 0,
     "Sanity": 2,
-    "Animation": [["spanek.png", "spanek.png","spanek.png"],
-		  ["spanek.png", "spanek.png","spanek.png"],
-		  ["spanek.png", "spanek.png","spanek.png"]
+    "Animation": [["spici.gif", "spici.gif","spici.gif"],
+		  ["spici.gif", "spici.gif","spici.gif"],
+		  ["spici.gif", "spici.gif","spici.gif"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg",
+    "Background":"spanek.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":0
 },
 
 {
-    "Name": "Učeni",
-    "Health": -5,
-    "Knowledge": 20,
+    "Name": "Učení",
+    "Health": -10,
+    "Knowledge": 5,
     "Sanity": -10,
-    "Animation": [["uceni.png", "uceni.png","uceni.png"],
-		  ["uceni.png", "uceni.png","uceni.png"],
-		  ["uceni.png", "uceni.png","uceni.png"]
+    "Animation": [["ucici.gif", "ucici.gif","ucici.gif"],
+		  ["ucici.gif", "ucici.gif","ucici.gif"],
+		  ["ucici.gif", "ucici.gif","ucici.gif"]
 		 ],
     "AnimationTime":3000,
-    "Background":"pozadi.jpg",
+    "Background":"uceni.JPG",
     "week_start": 1,
     "week_end": 18,
     "minstate":1
-}
+},
 
 ];
 
