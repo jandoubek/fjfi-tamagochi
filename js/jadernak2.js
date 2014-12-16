@@ -231,7 +231,7 @@ var jadernak = {
 		var subject_tab_content='<div id="subject_tab_content_id" class="tab-content col-xs-7">';
 
 		//show clicable subject
-		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logocerne.png" style="height:50px;margin-right:auto;width:100%"> </a></li>';
+		subjects_select+='<li class="active"><a href="#tabid_index" data-toggle="pill"><img src="image/logocerne.png" style="width:100%; max-width:50px;margin-right:auto;margin-left: auto; display: block;"> </a></li>';
 		//tab content:
 		subject_tab_content+='<div class="tab-pane active" id="tabid_index">';
 		subject_tab_content+='<h4 style="margin-top:20%">INDEX</h4>';
@@ -265,7 +265,7 @@ var jadernak = {
 					if(j==Subjects[i].req.length)
 					{
 						//show clicable subject
-						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"  style="margin-right:auto;width:100%;border:1px solid white;border-radius: 5px"></a></li>';
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'"  style="margin-right:auto;margin-left: auto; display: block; width:100%;max-width:50px;border:1px solid white;border-radius: 5px"></a></li>';
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
@@ -278,7 +278,7 @@ var jadernak = {
 					else
 					{
 						//show unclicable due unsatisfied requirements
-						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" style="margin-right:auto;width:100%;border:1px solid black;border-radius: 5px"></a></li>';
+						subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" style="margin-right:auto;margin-left: auto; display: block;width:100%;max-width:50px;border:1px solid black;border-radius: 5px"></a></li>';
 						//tab content:
 						subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 						subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
@@ -295,7 +295,7 @@ var jadernak = {
 				if(count<6 && shown==0 && this.Week <=Subjects[i].week_end)
 				{
 					//show unclicable due no time for subject
-					subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" style="margin-right:auto;width:100%;border:1px solid white;border-radius: 5px"></a></li>';
+					subjects_select+='<li><a href="#tabid_'+Subjects[i].id+'" data-toggle="pill"><img src="./image/'+Subjects[i].profphoto+'" style="margin-right:auto;margin-left: auto; display: block;width:100%;max-width:50px;border:1px solid white;border-radius: 5px"></a></li>';
 					//tab content:
 					subject_tab_content+='<div class="tab-pane" id="tabid_'+Subjects[i].id+'">';
 					subject_tab_content+='<h4 style="margin-top:20%">'+Subjects[i].name+'</h4>';
